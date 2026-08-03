@@ -1,0 +1,151 @@
+{
+  "schema_version": "g6-standard-1-dynamic-forward-operation-contract-v1",
+  "operation_id": "G6-STANDARD-1-DYNAMIC-FORWARD-R2-20260803",
+  "registered_at": "2026-08-03T01:40:14+08:00",
+  "first_eligible_plan_session": "2026-08-04",
+  "timezone": "Asia/Shanghai",
+  "delivery_deadline": "2026-08-03T21:49:29+08:00",
+  "strategy_identity": {
+    "canonical_name": "G6-Standard-1",
+    "technical_id": "G6-SCQVT6-E50-G20-T025-Q1-L2-C225-R1",
+    "candidate_status": "rejected-L1-historical-economic-gates-failed",
+    "simulation_approved": false,
+    "safe_for_account_order_placement": false,
+    "economic_contract": {
+      "path": "config/strategy-research-g6-v1/001_G6-Standard_quarterly_valuation_tilt_contract.json",
+      "sha256": "38f3a70c2a2f54c81d6fb70e3f2b1ed33298fa0828b4f4cbbfbd548b3b6cd8f2"
+    },
+    "technical_correction_contract": {
+      "path": "config/strategy-research-g6-v1/002_G6-Standard-1_settlement_accounting_correction_contract.json",
+      "sha256": "4d052b4fa592be82357fbcf8f23ea12e66cf15534f838650797832c1394cf56f"
+    },
+    "frozen_result": {
+      "path": "research/stage-08-g6/005_G6-Standard-1_quarterly_valuation_tilt_result.json",
+      "sha256": "d90ae1c2cf8248969872401ea31f2bbaadd5d808367d23fbfd37b1338d75f339"
+    }
+  },
+  "lineage": {
+    "supersedes_observation_contract_for_new_sessions_only": {
+      "path": "config/strategy-research-g6-v1/003_G6-Standard-1_prospective_signal_shadow_contract.json",
+      "sha256": "aecea738f26723c45a147594c50dbe1c28a91f1a95820df3daa65bccb1e969c8"
+    },
+    "preserved_genesis_plan": {
+      "path": "research/forward-shadow/g6-standard-1/plans/001_2026-08-03_pre_session_plan.json",
+      "sha256": "38542339d3244c9f60341ffe164a5c0b6942d5d72a1eb9ad83f53671ab2ce5a4"
+    },
+    "preserved_genesis_cas": {
+      "path": "research/governance/g6_standard_1_forward_genesis_cas_manifest.json",
+      "sha256": "9a1515b04cd746434af288f5e14eab5ba9ba999ab245b9b670b0e260c397148e"
+    },
+    "r1_implementation_is_frozen_and_must_not_be_modified": {
+      "src/cn_fund_strategy/application/g6_forward_shadow.py": "998ca21df0369658ea7c523e2bdb212379bb99ec9641f1d27d233a6864abd539",
+      "src/cn_fund_strategy/interfaces/g6_forward_cli.py": "814fcda90d2e1cf6c2de33cbb6d7bd2563ccb3f5c80acf5bc0f224845900da69"
+    },
+    "r2_new_implementation_paths": [
+      "src/cn_fund_strategy/adapters/g6_global_valuation_capture.py",
+      "src/cn_fund_strategy/adapters/sse_closure_calendar.py",
+      "src/cn_fund_strategy/application/g6_dynamic_forward.py",
+      "src/cn_fund_strategy/interfaces/g6_dynamic_forward_cli.py"
+    ]
+  },
+  "economic_rules_unchanged": {
+    "base_target_weights": {
+      "CN300": "0.05",
+      "CN500": "0.05",
+      "GROWTH": "0.05",
+      "HK": "0.00",
+      "SP500": "0.15",
+      "NASDAQ": "0.20",
+      "GOLD": "0.20",
+      "BOND": "0.30"
+    },
+    "formal_decision_frequency": "last-completed-common-fund-NAV-session-of-March-June-September-December",
+    "momentum": "10-complete-common-month-ends-total-return",
+    "valuation": "PE-PB-history-percentile-observation-strictly-before-formal-decision-session",
+    "receiver": "score-lte-0.20-or-score-lte-0.40-and-momentum-gt-minus-0.10",
+    "donor": "highest-score-core-sleeve-with-score-gte-0.65",
+    "tilt_weight": "0.025",
+    "missing_incomplete_or_stale_signal": "return-to-base-fail-closed",
+    "formal_execution_lag": "not-earlier-than-two-completed-common-sessions-and-never-before-signal-evidence-was-durably-captured",
+    "between_formal_decisions": "HOLD-current-model-target-with-zero-economic-order"
+  },
+  "current_data_contract": {
+    "fund_NAV_and_total_return_source": "Eastmoney-public-profile-JavaScript-current-capture",
+    "fund_codes": {
+      "CN300": "510300",
+      "CN500": "510500",
+      "GROWTH": "159915",
+      "HK": "000071",
+      "SP500": "050025",
+      "NASDAQ": "270042",
+      "GOLD": "000216",
+      "BOND": "161120"
+    },
+    "valuation_source": "Danjuan-public-PE-and-PB-history-current-capture",
+    "valuation_codes": {
+      "CN300": "SH000300",
+      "CN500": "SH000905",
+      "GROWTH": "SZ399006",
+      "HK": "HKHSI",
+      "SP500": "SP500",
+      "NASDAQ": "NDX"
+    },
+    "mainland_calendar_source": "https://www.sse.com.cn/disclosure/dealinstruc/closed/",
+    "history_qualification": "retrospective-history-contaminated; only observations first captured after this contract are prospective",
+    "missing_conflicting_capture_or_hash": "quarantine-and-HOLD-no-order"
+  },
+  "daily_output": {
+    "reference_portfolio_CNY": "100000.00",
+    "plan_for": "next-official-mainland-trading-session",
+    "required_fields": [
+      "fund_code",
+      "fund_name",
+      "direction",
+      "target_weight_decimal",
+      "reference_target_amount_CNY_per_100k",
+      "requested_weight_change_decimal",
+      "requested_amount_CNY_per_100k",
+      "trigger_reason_codes",
+      "purchase_status",
+      "purchase_cap_CNY",
+      "tradeability_status",
+      "execution_gate_status"
+    ],
+    "account_state": "not-accessed; output-is-model-reference-not-personalized-order",
+    "no_account_or_lot_state": "do-not-convert-model-target-into-user-specific-share-quantity"
+  },
+  "execution_fail_closed": {
+    "QDII_buy": "same-share-same-channel-current-open-and-cap-at-least-requested-amount; no-order-splitting-or-high-premium-substitution",
+    "offexchange_sell": "current-redemption-open-and-actual-lot-holding-period-fee-recheck-required",
+    "listed_ETF_order": "same-session-price-trading-status-spread-depth-premium-commission-and-slippage-evidence-required",
+    "unknown_or_stale": "blocked",
+    "blocked_buy_destination": "BOND-or-cash-defense"
+  },
+  "authority_and_evidence": {
+    "read_only_research_and_shadow_plan_only": true,
+    "may_access_account_credentials_positions_or_lots": false,
+    "may_submit_cancel_or_modify_orders": false,
+    "historical_results_are_clean_OOS": false,
+    "prospective_plan_is_simulation_promotion_evidence": false,
+    "performance_claim_inherited_without_operational_timing_gap_test": false,
+    "implementation_and_first_output_must_be_bound_by_postrun_CAS": true,
+    "no_backfill": true,
+    "create_or_identical_outputs": true
+  },
+  "bounded_24h_scope": {
+    "must_deliver": [
+      "dynamic-current-signal-snapshot",
+      "official-next-session-scheduling",
+      "current-product-limit-gated-daily-plan",
+      "focused-and-full-test-results",
+      "target-metric-pass-fail-and-material-limitations"
+    ],
+    "explicitly_deferred": [
+      "candidate-pool-expansion",
+      "new-economic-parameter-search",
+      "broker-paper-account-integration",
+      "complete-historical-point-in-time-QDII-limit-archive",
+      "perfect-point-in-time-fee-table-for-every-share-class"
+    ]
+  }
+}

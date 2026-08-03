@@ -1,0 +1,117 @@
+{
+  "schema_version": "cn-fund-public-evidence-summary-v1",
+  "published_at": "2026-08-03T00:00:00+08:00",
+  "candidate": {
+    "canonical_name": "G6-Standard-1",
+    "technical_id": "G6-SCQVT6-E50-G20-T025-Q1-L2-C225-R1",
+    "status": "rejected-research-only",
+    "formation_was_performance_informed": true,
+    "historical_results_are_clean_OOS": false,
+    "simulation_approved": false,
+    "safe_for_account_order_placement": false
+  },
+  "ledger_binding": {
+    "path": "evidence/g6-standard-1/daily_accounting_ledger.json",
+    "sha256": "ea9a4e7d2026a47645bd06e109213ff810ca9a83acbebb760be36332c1c701b2",
+    "description": "2740-session base-scenario daily accounting ledger"
+  },
+  "private_origin_artifact_hashes": {
+    "frozen_result_sha256": "d90ae1c2cf8248969872401ea31f2bbaadd5d808367d23fbfd37b1338d75f339",
+    "frozen_report_sha256": "640791be7b2e5b67c888f3530f23e6259b01243378ef14199ff73b5a89b9c4bd",
+    "full_verification_sha256": "98a3932dd4456eda09d52a9ab4d64e9b8f641137b2b7616cca3ff31ff835def7"
+  },
+  "base_scenario": {
+    "start_session": "2015-01-05",
+    "end_session": "2026-07-30",
+    "common_session_count": 2740,
+    "years_252_decimal": "10.86904761904761904761904761904761904762",
+    "one_way_cost_decimal": "0.005",
+    "execution_lag_common_sessions": 2,
+    "ending_nav_decimal": "3.100468376399153424379984085837792764861",
+    "net_cagr_decimal": "0.109720132806510939796323879619848512786",
+    "maximum_drawdown_decimal": "0.1335103663551733151840230019855152444706",
+    "calmar_decimal": "0.8218098399537457225538626031764361396153",
+    "annualized_l1_turnover_decimal": "0.4458356101237909740271419779052977734315",
+    "trade_count": 47,
+    "maximum_preaction_extreme_static_loss_decimal": "0.4402487890524234399407556969075604953039",
+    "maximum_extreme_path_overlay_drawdown_decimal": "0.4684915032734412656751449312690737741160",
+    "maximum_extreme_path_overlay_drawdown_session": "2022-10-11"
+  },
+  "robustness": {
+    "rolling_3y_window_count": 32,
+    "rolling_3y_minimum_cagr_decimal": "0.048167844898776915138625912036014765808",
+    "rolling_3y_fraction_cagr_gte_10pct_decimal": "0.4375",
+    "rolling_5y_window_count": 24,
+    "rolling_5y_minimum_cagr_decimal": "0.086943535504240575553519043721637763702",
+    "rolling_5y_fraction_cagr_gte_10pct_decimal": "0.75",
+    "high_cost_100bp_net_cagr_decimal": "0.107240254584945384202099927663744866139",
+    "lag10_cost250bp_net_cagr_decimal": "0.097441027905721427971872759282391544150",
+    "settlement_wait10_net_cagr_decimal": "0.109324446633773218744282567154004612703",
+    "net_excess_cagr_vs_frozen_benchmark_decimal": "0.007243337795914672290974751105540411254"
+  },
+  "user_objective_evaluation": {
+    "net_cagr_gte_10pct": true,
+    "normal_mdd_lte_35pct": true,
+    "static_extreme_stress_lte_45pct": true,
+    "historical_path_plus_extreme_stress_overlay_lte_45pct": false,
+    "rolling_3y_fraction_cagr_gte_10pct_gte_50pct": false,
+    "overall_objective_passed": false,
+    "decision": "reject candidate; retain as research reference only"
+  },
+  "ledger_recalculation_targets": {
+    "row_count": 2740,
+    "start_session": "2015-01-05",
+    "end_session": "2026-07-30",
+    "years_252_decimal": "10.8690476190476190476190476190476190476190476190476190476190",
+    "ending_nav_decimal": "3.100468376399153424379984085837792764861",
+    "net_cagr_decimal": "0.10972013280651093979632387961984851278562564268027045963497",
+    "maximum_drawdown_decimal": "0.13351036635517331518402300198551524447063533018882",
+    "maximum_preaction_extreme_static_loss_decimal": "0.4402487890524234399407556969075604953039",
+    "maximum_preaction_extreme_static_loss_session": "2020-07-06",
+    "maximum_postaction_extreme_static_loss_decimal": "0.4372111431008041592891032782769613119377",
+    "maximum_postaction_extreme_static_loss_session": "2020-07-02",
+    "maximum_extreme_path_overlay_drawdown_decimal": "0.46849150327344126567514493126907377411601162158376",
+    "maximum_extreme_path_overlay_drawdown_session": "2022-10-11",
+    "maximum_weight_sum_residual_decimal": "0.00000000000000000000000000000000000000073",
+    "negative_weight_count": 0,
+    "maximum_gross_weight_decimal": "1.00000000000000000000000000000000000000064",
+    "maximum_gross_weight_session": "2026-03-24"
+  },
+  "frozen_target_weights": {
+    "CN300": "0.05",
+    "CN500": "0.05",
+    "GROWTH": "0.05",
+    "HK": "0.00",
+    "SP500": "0.15",
+    "NASDAQ": "0.20",
+    "GOLD": "0.20",
+    "BOND": "0.30"
+  },
+  "historical_proxy_products": {
+    "CN300": "510300",
+    "CN500": "510500",
+    "GROWTH": "159915",
+    "HK": "000071",
+    "SP500": "050025",
+    "NASDAQ": "270042",
+    "GOLD": "000216",
+    "BOND": "161120"
+  },
+  "preclose_product_snapshot": {
+    "captured_at": "2026-08-02T22:40:00+08:00",
+    "stale_for_future_execution": true,
+    "050025": "suspended; page also displayed a CNY 100 daily cap",
+    "270042": "limited; CNY 5 daily cap",
+    "new_portfolio_initialization": "blocked at capture time",
+    "existing_model_portfolio_economic_action": "HOLD"
+  },
+  "material_limitations": [
+    "The full history and structure selection are contaminated formation evidence, not clean out-of-sample evidence.",
+    "Valuation history was captured retrospectively and is not a complete contemporaneous point-in-time archive.",
+    "The cost model is a conservative envelope, not a complete historical time-varying fee table.",
+    "The SP500 and Nasdaq sleeves have material US mega-cap growth and technology overlap.",
+    "Historical proxy codes do not prove that the same products were purchasable in the required amount at every decision time.",
+    "QDII subscription limits and exchange ETF premium, spread, depth and trading state must be checked at the intended execution time.",
+    "No account, credential, holding lot or real order is represented by this artifact."
+  ]
+}

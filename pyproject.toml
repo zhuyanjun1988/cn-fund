@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cn-fund-research"
+version = "0.1.0"
+description = "Research-only RMB-accessible public-fund allocation and valuation-tilt strategy."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Proprietary - no license granted"}
+authors = [{name = "CN Fund Research Project"}]
+dependencies = []
+
+[project.scripts]
+cn-fund-research = "cn_fund_strategy.interfaces.public_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

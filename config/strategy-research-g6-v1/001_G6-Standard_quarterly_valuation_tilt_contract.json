@@ -1,0 +1,148 @@
+{
+  "schema_version": "g6-standard-quarterly-valuation-tilt-contract-v1",
+  "canonical_name": "G6-Standard",
+  "technical_id": "G6-SCQVT6-E50-G20-T025-Q1-L2-C225",
+  "registered_at": "2026-08-03T00:57:00+08:00",
+  "registration_timing": "after-G5-rejection-and-quarterly-base-mechanism-diagnostic-before-first-G6-dynamic-tilt-run",
+  "status": "preregistered-L1-historical-development-contaminated",
+  "single_material_economic_redesign": "replace-G5s-bond-funded-extra-equity-batch-and-annual-risk-reset-with-a-quarterly-self-financing-2.5pct-relative-valuation-transfer-inside-a-fixed-50pct-equity-budget",
+  "parent_bindings": {
+    "G5_result": {
+      "path": "research/stage-08-g5/002_G5-Standard_strategic_core_single_valuation_batch_result.json",
+      "sha256": "6743ce851db719cabf9e55801b652f2e5c90e624a9a1f4e1a207cab9f6ea6333"
+    },
+    "G5_daily_ledger": {
+      "path": "research/stage-08-g5/003_G5-Standard_base_daily_accounting_ledger.json",
+      "sha256": "0b9f64fbc5c2e9bc6c57773ddc8ebfc62f4fcfd19f5b5e7c0ffb08f6d6ed1462"
+    },
+    "frozen_benchmark": {
+      "path": "research/stage-08-g1/001_G1-Standard_24h_research_result.json",
+      "sha256": "3af4d2679bbfbc183120b383d98f4f35a6f191f2d32323931c94035e3726b750"
+    }
+  },
+  "formation_disclosure": {
+    "clean_or_OOS": false,
+    "G5-performance-observed": true,
+    "quarterly-base-performance-observed-before-registration": true,
+    "quarterly-base-50-20-30-CAGR-observed": true,
+    "G6-dynamic-tilt-performance-observed-before-registration": false,
+    "consequence": "all-G6-history-is-contaminated-formation-evidence-forward-shadow-required"
+  },
+  "economic_thesis": {
+    "inspiration_mode": "E150-inspired-self-research-not-reproduction",
+    "borrowed_principles": [
+      "long-term-core",
+      "small-predeclared-low-buy-high-sell-batch",
+      "multiple-asset-defense",
+      "rules-over-forecasting",
+      "ordinary-investor-executability"
+    ],
+    "causal_chain": [
+      "fixed-50pct-equity-20pct-gold-30pct-bond-budget-owns-long-horizon-risk-premia",
+      "quarterly-rebalancing-controls-drift-and-systematically-sells-relative-winners-to-buy-relative-laggards",
+      "a-single-2.5pct-transfer-occurs-only-when-one-equity-sleeve-is-cheap-and-an-existing-core-sleeve-is-expensive",
+      "the-transfer-does-not-increase-total-equity-or-consume-the-bond-defense",
+      "small-size-and-quarterly-frequency-bound-turnover-and-model-risk"
+    ],
+    "E150_numeric_positions_or_trade_units_have_parameter_authority": false,
+    "researcher_core_and-US-growth-overlap-not-E150-fact": true
+  },
+  "scope": {
+    "currency": "CNY",
+    "products": "mainland-China-CNY-purchasable-public-funds-or-listed-funds-after-current-cap-and-tradeability-gate",
+    "leverage": false,
+    "shorting": false,
+    "account_access_or_order_placement": false,
+    "research_only": true
+  },
+  "strategic_target": {
+    "CN300": "0.05",
+    "CN500": "0.05",
+    "GROWTH": "0.05",
+    "HK": "0.00",
+    "SP500": "0.15",
+    "NASDAQ": "0.20",
+    "GOLD": "0.20",
+    "BOND": "0.30",
+    "total_equity": "0.50"
+  },
+  "quarterly_valuation_tilt": {
+    "decision_sessions": "last-common-session-of-March-June-September-December",
+    "execution": "two-common-sessions-after-decision-close",
+    "batch_weight": "0.025",
+    "maximum_pairs": 1,
+    "equity_weight_before_and_after": "0.50",
+    "valuation_information_rule": "latest-PE-and-PB-observation-strictly-before-decision-session",
+    "valuation_score": "mean-expanding-PE-PB-percentile-minimum-13-observations",
+    "receiver": "lowest-score-sleeve-with-score<=0.20-or-score<=0.40-and-ten-month-momentum>-0.10",
+    "donor": "highest-score-positive-core-sleeve-other-than-receiver-with-score>=0.65",
+    "tie_breaks": "receiver-higher-momentum-then-fixed-order-donor-lower-momentum-then-fixed-order",
+    "no-complete-cheap-receiver-or-expensive-donor": "remove-prior-tilt-and-return-to-strategic-target",
+    "missing-live-signal": "no-new-tilt-return-to-strategic-target",
+    "same-quarter-intermediate-review": "HOLD-no-order"
+  },
+  "risk_budget": {
+    "nominal_equity_weight": "0.50",
+    "gold_weight": "0.20",
+    "bond_weight": "0.30",
+    "maximum_nominal_single-sleeve-weight": "0.225",
+    "extreme_loss_factors": {
+      "domestic_equity": "0.60",
+      "overseas_equity": "0.66",
+      "gold": "0.30",
+      "bond": "0.10"
+    },
+    "base-target-extreme-static-loss": "0.4110",
+    "maximum-target-extreme-static-loss": "0.4125",
+    "hard-observed-path-static-loss-gate": "0.45"
+  },
+  "execution_accounting_and_cost": {
+    "daily-mark-to-market-before-actions": true,
+    "quarterly-target-rebalance-includes-strategic-core-and-current-tilt": true,
+    "dividends": "embedded-adjusted-total-return-not-double-counted",
+    "base-one-way-cost": "0.005",
+    "high-one-way-cost": "0.01",
+    "extreme-one-way-cost": "0.025",
+    "base-and-high-lag-common-sessions": 2,
+    "extreme-lag-common-sessions": 10,
+    "redemption-settlement-stress-common-sessions": 10
+  },
+  "objective_gates": {
+    "minimum_common_sessions": 2521,
+    "minimum_net_CAGR_decimal": "0.10",
+    "maximum_normal_drawdown_decimal": "0.35",
+    "maximum_extreme_static_stress_loss_decimal": "0.45",
+    "minimum_Calmar_decimal": "0.30",
+    "minimum_net_excess_CAGR_vs_preregistered_benchmark_decimal_exclusive": "0",
+    "preregistered_benchmark": "G1-frozen-STATIC65-ANNUAL",
+    "preregistered_benchmark_result_sha256": "3af4d2679bbfbc183120b383d98f4f35a6f191f2d32323931c94035e3726b750",
+    "high_cost_100bp_minimum_net_CAGR_decimal": "0.095",
+    "lag10_cost250bp_minimum_net_CAGR_decimal": "0.09",
+    "rolling_3y_minimum_CAGR_decimal": "0",
+    "rolling_3y_fraction_CAGR_gte_10pct_minimum_decimal": "0.50",
+    "rolling_5y_minimum_CAGR_decimal": "0.07",
+    "rolling_5y_fraction_CAGR_gte_10pct_minimum_decimal": "0.60"
+  },
+  "bounded_research": {
+    "selectable_G6_candidates": 1,
+    "maximum_canonical_runs": 1,
+    "parameter_search": false,
+    "same-candidate-repair-after-result": false,
+    "failure_action": "stop-24h-family-search-and-report-no-approved-strategy",
+    "pass_action": "freeze-and-complete-independent-recalc-current-product-gate-and-forward-shadow-start"
+  },
+  "product_gate": {
+    "exact-code-and-share-class": true,
+    "offexchange-current-cap-gte-planned-buy": true,
+    "listed-ETF-current-premium-spread-depth-trading-state": true,
+    "unknown-or-conflicting": "blocked",
+    "unfilled-target": "remain-in-BOND",
+    "split-to-evade-limit": false
+  },
+  "evidence_limits": {
+    "history": "2015-01-05-to-2026-07-30-contaminated",
+    "valuation-history-strict-PIT": false,
+    "historical-product-and-QDII-limit-history-complete": false,
+    "historical-pass-authorizes-trading": false
+  }
+}

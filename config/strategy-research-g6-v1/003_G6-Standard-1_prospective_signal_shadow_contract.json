@@ -1,0 +1,110 @@
+{
+  "schema_version": "g6-standard-1-prospective-signal-shadow-contract-v1",
+  "observation_id": "G6-STANDARD-1-PROSPECTIVE-SIGNAL-SHADOW-20260803",
+  "registered_at": "2026-08-03T01:20:29+08:00",
+  "first_eligible_plan_session": "2026-08-03",
+  "timezone": "Asia/Shanghai",
+  "strategy_identity": {
+    "canonical_name": "G6-Standard-1",
+    "technical_id": "G6-SCQVT6-E50-G20-T025-Q1-L2-C225-R1",
+    "candidate_status_at_freeze": "rejected-L1-historical-economic-gates-failed",
+    "simulation_approved": false,
+    "safe_for_account_order_placement": false,
+    "economic_contract": {
+      "path": "config/strategy-research-g6-v1/001_G6-Standard_quarterly_valuation_tilt_contract.json",
+      "sha256": "38f3a70c2a2f54c81d6fb70e3f2b1ed33298fa0828b4f4cbbfbd548b3b6cd8f2"
+    },
+    "technical_correction_contract": {
+      "path": "config/strategy-research-g6-v1/002_G6-Standard-1_settlement_accounting_correction_contract.json",
+      "sha256": "4d052b4fa592be82357fbcf8f23ea12e66cf15534f838650797832c1394cf56f"
+    },
+    "frozen_result": {
+      "path": "research/stage-08-g6/005_G6-Standard-1_quarterly_valuation_tilt_result.json",
+      "sha256": "d90ae1c2cf8248969872401ea31f2bbaadd5d808367d23fbfd37b1338d75f339"
+    },
+    "result_cas_manifest": {
+      "path": "research/governance/g6_standard_1_result_cas_manifest.json",
+      "sha256": "3d1fdd9aaa87e8dc05f6f766a9e8869d5de49a499c782428cb405bd0b342f5c9"
+    },
+    "behavioral_code_hashes": {
+      "src/cn_fund_strategy/domain/g6_quarterly_valuation_tilt.py": "2b49c584fccf7a847dd4c94c4b93e9a71e507044a6bdebea76e038e5212460eb",
+      "src/cn_fund_strategy/application/g6_replay.py": "92d32ac168cb6594d815bbac3295ac693c8e2ef0423b6f40ad50b350d3b5d4c8",
+      "src/cn_fund_strategy/interfaces/g6_research_cli.py": "1db9daab153b5742be868e2a66e295212cd40f6cf2578b75426d79d5c6745a6a"
+    }
+  },
+  "purpose_and_authority": {
+    "purpose": "prospectively-freeze-daily-signal-and-current-product-execution-gates-without-changing-the-rejected-candidate",
+    "may_generate_research_trade_brief": true,
+    "may_capture_read_only_public_product_status": true,
+    "may_access_account_credentials_positions_or_lots": false,
+    "may_submit_cancel_or_modify_orders": false,
+    "may_count_as_clean_historical_OOS": false,
+    "may_count_toward_simulation_promotion": false,
+    "reason_promotion_count_is_zero": "candidate-failed-preregistered-rolling-3y-gate-and-has-no-approved-broker-paper-account",
+    "changes_strategy_signal_weight_threshold_timing_or_product_role": false
+  },
+  "daily_plan_contract": {
+    "decision_information_cutoff": "prior-completed-common-session-close-or-earlier",
+    "formal_decision_sessions": "last-common-session-of-March-June-September-December",
+    "between_formal_decisions": "HOLD-existing-model-target-no-economic-order",
+    "formal_execution_lag_common_sessions": 2,
+    "reference_portfolio_CNY": "100000.00",
+    "account_state": "not-accessed-model-reference-only",
+    "target_weights_are_actual-account-weights": false,
+    "marked_historical-ending-weights-are-actual-account-holdings": false,
+    "required_order_fields": [
+      "fund-code",
+      "fund-name",
+      "sleeve-id",
+      "direction",
+      "target-weight",
+      "reference-target-amount-CNY",
+      "requested-weight-change",
+      "requested-amount-CNY",
+      "trigger-reasons",
+      "purchase-status",
+      "purchase-cap-CNY",
+      "tradeability-status",
+      "execution-gate-status"
+    ]
+  },
+  "execution_fail_closed": {
+    "offexchange-buy": "exact-share-current-channel-open-and-current-cap-at-least-planned-gross-subscription-CNY",
+    "offexchange-sell": "current-redemption-open-plus-actual-lot-holding-period-and-fee-recheck",
+    "listed-ETF-order": "same-session-quote-spread-depth-trading-status-price-limit-premium-and-complete-cost-evidence-required",
+    "hold": "no-order-and-no-execution-evidence-required-but-current-status-may-still-be-reported",
+    "unknown_conflicting_stale_or_missing": "blocked",
+    "limit_evasion_by_share_channel_day_or_order_splitting": false,
+    "high-premium-exchange-substitution-to-bypass-QDII-limit": false,
+    "unfilled_target_destination": "BOND-or-cash-defense"
+  },
+  "point_in_time_and_chain": {
+    "no_plan_before_first_eligible_plan_session": true,
+    "no_backfill": true,
+    "caller_supplied_created_at_must_be_timezone_aware": true,
+    "input_snapshot_hashes_required": true,
+    "one_current-plan-per-plan-session": true,
+    "repeated-identical-run_is_idempotent": true,
+    "different-existing-output_is_error": true,
+    "previous-record-hash-required-after-genesis": true,
+    "record_hash_is_canonical_JSON_SHA256": true,
+    "correction_creates-linked-superseding-record": true
+  },
+  "session_evidence_status": {
+    "pre_session_plan": "not-counted-plan",
+    "complete": "only-after-all-input-signal-order-position-cash-fee-and-NAV-reconciliation-closes",
+    "incomplete": "retained-and-does-not-count",
+    "market_closed": "retained-and-does-not-count",
+    "incident": "retained-and-does-not-count",
+    "initial_complete_session_count": 0,
+    "required_complete_sessions_for-live-preparation": 252
+  },
+  "current_known_material_blockers": [
+    "rolling-3y-fraction-CAGR-gte-10pct-is-0.4375-below-preregistered-0.50",
+    "all-2015-to-2026-history-is-contaminated-formation-evidence",
+    "retrospective-valuation-capture-is-not-a-complete-contemporaneous-PIT-archive",
+    "no-real-or-broker-paper-account-position-lot-cash-or-fill-reconciliation",
+    "current-QDII-purchase-limits-can-block-target-initialization",
+    "same-session-listed-ETF-execution-evidence-is-not-yet-captured"
+  ]
+}

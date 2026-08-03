@@ -1,0 +1,36 @@
+{
+  "schema_version": "g6-standard-1-settlement-accounting-correction-contract-v1",
+  "canonical_name": "G6-Standard-1",
+  "technical_id": "G6-SCQVT6-E50-G20-T025-Q1-L2-C225-R1",
+  "registered_at": "2026-08-03T01:01:05+08:00",
+  "registration_timing": "after-G6-Standard-operational-failure-before-any-persisted-or-disclosed-G6-performance-result-and-before-corrected-run",
+  "parent_contract": {
+    "path": "config/strategy-research-g6-v1/001_G6-Standard_quarterly_valuation_tilt_contract.json",
+    "sha256": "38f3a70c2a2f54c81d6fb70e3f2b1ed33298fa0828b4f4cbbfbd548b3b6cd8f2"
+  },
+  "parent_failure": {
+    "path": "research/stage-08-g6/002_G6-Standard_first_run_operational_failure.json",
+    "sha256": "0b431ef3b0d57d9a327da4ce2672ef06e1ed1b812338f7e24d1dfa6ebe30631d",
+    "result_output_persisted": false,
+    "daily_ledger_output_persisted": false,
+    "performance_values_disclosed_or-recorded": false
+  },
+  "sole_allowed_change": {
+    "old_settlement_semantics": "apply-frozen-base-trade-risky-weight-deltas-to-the-cash-delayed-path",
+    "new_settlement_semantics": "at-each-frozen-fill-set-each-risky-sleeve-to-the-frozen-posttrade-target-using-current-path-sales-to-zero-return-settlement-cash-and-current-path-purchases-from-available-bond",
+    "negative-risky-weight-possible": false,
+    "signal-sessions-execution-sessions-base-replay-targets-and-costs-change": false,
+    "economic-rules-core-weights-tilt-thresholds-batch-frequency-products-data-benchmark-stress-and-objective-gates-change": false
+  },
+  "identity_only_change": {
+    "canonical_name": "G6-Standard-to-G6-Standard-1",
+    "technical_id_suffix": "-R1"
+  },
+  "one_run_protocol": {
+    "maximum-G6-Standard-1-runs": 1,
+    "same-candidate-repair-after-result": false,
+    "failure_action": "stop-and-report-no-approved-strategy",
+    "pass_action": "freeze-and-run-independent-recalculation-product-gate-and-forward-shadow-start"
+  },
+  "inherited_authority": "all-economic-rules-data-gates-limitations-and-no-trade-authority-are-inherited-byte-for-byte-semantically-from-parent"
+}
