@@ -1,4 +1,4 @@
-.PHONY: check-python test verify-evidence policy
+.PHONY: check-python test verify-evidence policy standard-64-policy c11-policy
 
 PYTHON ?= $(shell command -v python3.12 2>/dev/null || command -v python3.11 2>/dev/null || command -v python3)
 
@@ -15,3 +15,9 @@ verify-evidence: check-python
 
 policy: check-python
 	PYTHONPATH=src $(PYTHON) -m cn_fund_strategy.interfaces.public_cli policy
+
+standard-64-policy: check-python
+	PYTHONPATH=src $(PYTHON) -m cn_fund_strategy.interfaces.public_cli standard-64-policy
+
+c11-policy: check-python
+	PYTHONPATH=src $(PYTHON) -m cn_fund_strategy.interfaces.public_cli c11-policy

@@ -9,6 +9,20 @@ from pathlib import Path
 from typing import Sequence
 
 from cn_fund_strategy.application.public_evidence import verify_public_evidence
+from cn_fund_strategy.domain.c11_balanced_60 import (
+    ASSET_ORDER as C11_ASSETS,
+    HARD_STRESS_RESEARCH_LIMIT,
+    MARKED_STRESS_MAINTENANCE_TRIGGER,
+    ORDINARY_DRIFT_TRIGGER,
+    OVERVALUED_MINIMUM,
+    UNDERVALUED_MAXIMUM,
+    C11State,
+    assess_maintenance,
+    decide_c11_style,
+    standard_64_target,
+    static_stress_loss,
+    target_for_c11_state,
+)
 from cn_fund_strategy.domain.g1_global_valuation_batch import EQUITY_SLEEVES
 from cn_fund_strategy.domain.g6_quarterly_valuation_tilt import (
     G6Signal,
@@ -57,6 +71,24 @@ def _key_values(
     return tuple((key, values[key]) for key in EQUITY_SLEEVES)
 
 
+def _c11_asset_weights(raw: str) -> dict[str, Decimal]:
+    values: dict[str, Decimal] = {}
+    for part in raw.split(","):
+        key, separator, text = part.strip().partition("=")
+        if not separator or key not in C11_ASSETS or key in values:
+            raise argparse.ArgumentTypeError(
+                f"invalid or duplicate C11 asset assignment: {part!r}"
+            )
+        try:
+            values[key] = Decimal(text)
+        except Exception as exc:
+            raise argparse.ArgumentTypeError(f"invalid decimal: {part!r}") from exc
+    if set(values) != set(C11_ASSETS):
+        missing = sorted(set(C11_ASSETS) - set(values))
+        raise argparse.ArgumentTypeError(f"missing C11 assets: {missing}")
+    return {key: values[key] for key in C11_ASSETS}
+
+
 def _policy() -> int:
     policy = standard_g6_1_policy()
     _emit(
@@ -76,6 +108,91 @@ def _policy() -> int:
             "authority": "research-only-not-a-trading-instruction",
         }
     )
+    return 0
+
+
+def _standard_64_policy() -> int:
+    target = dict(standard_64_target())
+    _emit(
+        {
+            "canonical_name": "Fixed-E60-35-10-15-5-5-20-10",
+            "target_weights": target,
+            "equity_weight": sum(target[key] for key in ("022430", "006729", "021550")),
+            "bond_weight": sum(target[key] for key in ("006662", "012773", "007169")),
+            "cash_weight": target["CASH"],
+            "target_static_stress": static_stress_loss(target),
+            "ordinary_drift_trigger": "strictly-greater-than-0.05",
+            "marked_stress_maintenance_trigger": "strictly-greater-than-0.44",
+            "authority": "research-baseline-only-not-an-executable-order",
+        }
+    )
+    return 0
+
+
+def _c11_policy() -> int:
+    _emit(
+        {
+            "canonical_name": "C11-C8-Style-Switch-Balanced-60",
+            "technical_id": "C11-C8STYLE-E60-STRESS44-M1",
+            "states": {
+                state.value: dict(target_for_c11_state(state)) for state in C11State
+            },
+            "valuation_semantics": "arithmetic mean of PE and PB point-in-time percentiles",
+            "state_rules": {
+                "M60": "valuation_composite <= 0.30 and relative_trend > 0",
+                "D60": "valuation_composite >= 0.70 and relative_trend < 0",
+                "otherwise": "retain the previously confirmed state",
+            },
+            "thresholds": {
+                "undervalued_maximum": UNDERVALUED_MAXIMUM,
+                "overvalued_minimum": OVERVALUED_MINIMUM,
+                "ordinary_drift_strictly_greater_than": ORDINARY_DRIFT_TRIGGER,
+                "marked_stress_strictly_greater_than": MARKED_STRESS_MAINTENANCE_TRIGGER,
+                "hard_research_stress_limit": HARD_STRESS_RESEARCH_LIMIT,
+            },
+            "target_state_static_stress": static_stress_loss(
+                dict(target_for_c11_state(C11State.B60))
+            ),
+            "authority": "research-policy-only-not-an-executable-order",
+        }
+    )
+    return 0
+
+
+def _c11_decision(args: argparse.Namespace) -> int:
+    previous = C11State(args.previous_state)
+    decision = decide_c11_style(
+        previous_state=previous,
+        pe_percentile=Decimal(args.pe_percentile),
+        pb_percentile=Decimal(args.pb_percentile),
+        relative_trend=Decimal(args.relative_trend),
+    )
+    output: dict[str, object] = {
+        "previous_state": decision.previous_state.value,
+        "desired_state": decision.desired_state.value,
+        "state_changed": decision.state_changed,
+        "valuation_composite": decision.valuation_composite,
+        "relative_trend": decision.relative_trend,
+        "reason_codes": decision.reason_codes,
+        "target_weights": decision.target_mapping(),
+        "formal_clock": "month-end; valuation cutoff is two XSHG sessions earlier",
+        "execution_clock": "no earlier than the next common session",
+        "product_and_limit_gate": "not evaluated by this command",
+        "authority": "signal-calculation-only-not-an-executable-order",
+    }
+    if args.marked_weights is not None:
+        assessment = assess_maintenance(
+            marked_weights=_c11_asset_weights(args.marked_weights),
+            target_weights=decision.target_mapping(),
+        )
+        output["maintenance"] = {
+            "maximum_absolute_gap": assessment.maximum_absolute_gap,
+            "marked_static_stress": assessment.marked_static_stress,
+            "ordinary_drift_triggered": assessment.ordinary_drift_triggered,
+            "stress_maintenance_triggered": assessment.stress_maintenance_triggered,
+            "reason_codes": assessment.reason_codes,
+        }
+    _emit(output)
     return 0
 
 
@@ -111,10 +228,32 @@ def _verify(args: argparse.Namespace) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Inspect the G6 research policy and verify its public evidence"
+        description="Inspect public fund-strategy research policies and evidence"
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("policy", help="print the frozen research policy")
+    subparsers.add_parser(
+        "standard-64-policy",
+        help="print the exact fixed 35/10/15/5/5/20/10 research baseline",
+    )
+    subparsers.add_parser(
+        "c11-policy", help="print the public C11 state machine and risk thresholds"
+    )
+
+    c11_decision = subparsers.add_parser(
+        "c11-decision",
+        help="calculate a C11 state from explicit point-in-time research signals",
+    )
+    c11_decision.add_argument(
+        "--previous-state", required=True, choices=[state.value for state in C11State]
+    )
+    c11_decision.add_argument("--pe-percentile", required=True)
+    c11_decision.add_argument("--pb-percentile", required=True)
+    c11_decision.add_argument("--relative-trend", required=True)
+    c11_decision.add_argument(
+        "--marked-weights",
+        help="optional seven asset=weight assignments for drift/stress assessment",
+    )
 
     decision = subparsers.add_parser(
         "decision",
@@ -149,6 +288,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     if args.command == "policy":
         return _policy()
+    if args.command == "standard-64-policy":
+        return _standard_64_policy()
+    if args.command == "c11-policy":
+        return _c11_policy()
+    if args.command == "c11-decision":
+        return _c11_decision(args)
     if args.command == "decision":
         return _decision(args)
     if args.command == "verify-evidence":

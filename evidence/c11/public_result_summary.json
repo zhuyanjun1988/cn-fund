@@ -1,0 +1,167 @@
+{
+  "schema_version": "c11-public-research-summary-v1",
+  "published_on": "2026-08-04",
+  "research_identity": {
+    "research_id": "C11",
+    "canonical_name": "C11-C8-Style-Switch-Balanced-60",
+    "technical_id": "C11-C8STYLE-E60-STRESS44-M1",
+    "status": "PASS_CONTAMINATED_RESEARCH_ONLY",
+    "evidence_class": "contaminated-L1-formation-not-clean-OOS",
+    "simulation_or_trading_authorized": false
+  },
+  "source_hashes": {
+    "contract_sha256": "cc87055596c23a28ee53a053f118934759b10273a29d026436d133ac09a4a846",
+    "claim_sha256": "838bb8347abbd684899213a8ac100c30e11e115f38f35ebdc832dd7a4925c1e2",
+    "full_ledger_sha256": "8a9fa73453970eff30cfcda6861c79b71814087d553207bf5e765980cfddc4df",
+    "result_sha256": "322e004ff0fe652c73b7b1ad78b344a97a82642277a469d682570f6d56987391",
+    "independent_audit_sha256": "55f5181b43fd8aae628caabb43f3aeb3def08d407772640aea056fa6343038e1",
+    "integrity_evaluation_sha256": "8b328ac606c075d34635a1cbbad5002f5e76247f8cce7416e2e8439a675180a6"
+  },
+  "publication_boundary": {
+    "full_ledger_published": false,
+    "reason": "The 31.8 MB internal ledger contains a full derived daily path from licensed or non-redistributable source data. Its hash is retained, while the frozen result, audit and integrity evaluation are published byte-for-byte.",
+    "public_policy_code_scope": "The public Python module reproduces target, signal, drift and stress rules; it is not the original dependency-complete historical replay engine."
+  },
+  "standard_64_baseline": {
+    "canonical_name": "Fixed-E60-35-10-15-5-5-20-10",
+    "target_weights": {
+      "022430": "0.35",
+      "006729": "0.10",
+      "021550": "0.15",
+      "006662": "0.05",
+      "012773": "0.05",
+      "007169": "0.20",
+      "CASH": "0.10"
+    },
+    "base_cost25bp_lag1": {
+      "net_cagr_decimal": "0.057801748489625729372136429886460323909",
+      "maximum_drawdown_decimal": "0.3247146740211306612568263871007764786858",
+      "annualized_volatility_decimal": "0.1277089915860671465235353132441322787841",
+      "calmar_decimal": "0.1780078115159781987737434230564432759526",
+      "maximum_marked_weight_static_stress_decimal": "0.4384353855406787039191047267482064349063",
+      "trade_count": 5
+    },
+    "high_cost100bp_lag1": {
+      "net_cagr_decimal": "0.056848567621057537349086484022356499048",
+      "maximum_drawdown_decimal": "0.3247146740211306612568263871007764786859",
+      "trade_count": 5
+    },
+    "extreme_cost250bp_lag10": {
+      "net_cagr_decimal": "0.055140263617056339744175264686114590903",
+      "maximum_drawdown_decimal": "0.3247146740211306612568263871007764786891",
+      "trade_count": 5
+    }
+  },
+  "c11_policy": {
+    "valuation_semantics": "Arithmetic mean of point-in-time CSI500 PE_TTM and PB percentiles. This implemented composite semantics generated every reported C11 result; it resolves ambiguity in the short contract prose.",
+    "relative_trend_semantics": "Twelve-calendar-month CSI500 total-return wealth factor divided by dividend-low-volatility total-return wealth factor, minus one.",
+    "state_rules": {
+      "M60": "valuation composite <= 0.30 and relative trend > 0",
+      "D60": "valuation composite >= 0.70 and relative trend < 0",
+      "otherwise": "retain the previously confirmed state"
+    },
+    "target_weights": {
+      "B60": {
+        "022430": "0.10",
+        "006729": "0.25",
+        "021550": "0.25",
+        "006662": "0.05",
+        "012773": "0.05",
+        "007169": "0.20",
+        "CASH": "0.10"
+      },
+      "M60": {
+        "022430": "0.10",
+        "006729": "0.40",
+        "021550": "0.10",
+        "006662": "0.05",
+        "012773": "0.05",
+        "007169": "0.20",
+        "CASH": "0.10"
+      },
+      "D60": {
+        "022430": "0.10",
+        "006729": "0.10",
+        "021550": "0.40",
+        "006662": "0.05",
+        "012773": "0.05",
+        "007169": "0.20",
+        "CASH": "0.10"
+      }
+    },
+    "risk_maintenance": {
+      "ordinary_drift_trigger": "strictly greater than 0.05 for any single asset",
+      "marked_static_stress_trigger": "strictly greater than 0.44",
+      "hard_research_limit": "0.45",
+      "target_state_static_stress": "0.373"
+    }
+  },
+  "frozen_result": {
+    "period": {
+      "start_session": "2015-01-05",
+      "end_session": "2026-08-03",
+      "economic_sessions": 2814,
+      "actual_006729_post_splice_sessions": 1718
+    },
+    "base_cost25bp_lag1": {
+      "net_cagr_decimal": "0.079131819726379376899486557927766732840",
+      "maximum_drawdown_decimal": "0.2799914513756781545674436136786536154409",
+      "annualized_volatility_decimal": "0.1307478761607860741436994990189494230665",
+      "calmar_decimal": "0.2826222705642693492603854819974081125169",
+      "maximum_marked_weight_static_stress_decimal": "0.4206210826846307100065913603340402689098",
+      "trade_count": 10
+    },
+    "high_cost100bp_lag1": {
+      "net_cagr_decimal": "0.077093890093177942809357415306091455332",
+      "maximum_drawdown_decimal": "0.2799914513756781545674436136786536154423",
+      "trade_count": 10
+    },
+    "extreme_cost250bp_lag10": {
+      "net_cagr_decimal": "0.071227111927613658560681093185253538039",
+      "maximum_drawdown_decimal": "0.2738243158342547428910932717780117688787",
+      "maximum_marked_weight_static_stress_decimal": "0.4126778479346883706174328381787260863945",
+      "trade_count": 10
+    },
+    "controls": {
+      "same_average_static_net_cagr_decimal": "0.070363422055689767075324642012549733198",
+      "same_average_static_maximum_drawdown_decimal": "0.3233995603872524001367120799788226563525",
+      "zero_enhancement_exact_clock_net_cagr_decimal": "0.063538420822927605104909930970015410986",
+      "zero_enhancement_exact_clock_maximum_drawdown_decimal": "0.2799914513756781545674436136786536154409"
+    }
+  },
+  "diagnostics": {
+    "state_sessions": {
+      "B60": 57,
+      "D60": 774,
+      "M60": 1983
+    },
+    "executed_state_changes": 2,
+    "complete_calendar_years_positive_2016_2025": "6/10",
+    "complete_calendar_years_beating_fixed_E60": "6/10",
+    "top_10_days_removed_candidate_CAGR": "0.0455734935825415455992464744367216361607354863395",
+    "primary_limitation": "Only two historical style-state transitions exist; this dominates the apparent length of the 11-year replay."
+  },
+  "latest_historical_snapshot": {
+    "as_of_session": "2026-08-03",
+    "confirmed_state": "M60",
+    "ending_marked_weights": {
+      "022430": "0.09589477585049932326156316743009307483915",
+      "006729": "0.3520100395427670975201029647393609834584",
+      "021550": "0.1194558450161871850505722918618757577459",
+      "006662": "0.05416070426988956311328146339143855864151",
+      "012773": "0.05416070426988956311328146339143855864151",
+      "007169": "0.2166428170795582524531258535657542345659",
+      "CASH": "0.1076751139712090154880727956200388321076"
+    },
+    "pending_execution_sessions": [],
+    "warning": "This is a stale research snapshot, not a current order or an instruction for an actual account."
+  },
+  "decision_boundary": {
+    "research_status": "PASS_RESEARCH_ONLY",
+    "simulation_status": "BLOCKED_NOT_EVALUATED",
+    "live_status": "BLOCKED",
+    "clean_OOS_claimed": false,
+    "forward_shadow_claimed": false,
+    "highest_value_next_evidence": "Freeze C11 unchanged and collect prospective forward-shadow decisions plus product-level NAV, fee, status and limit evidence."
+  }
+}

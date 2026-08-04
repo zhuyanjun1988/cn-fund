@@ -1,0 +1,84 @@
+{
+  "schema_version": "c11-L1-integrity-evaluation-v1",
+  "created_at_utc": "2026-08-04T02:41:30Z",
+  "research_id": "C11",
+  "canonical_name": "C11-C8-Style-Switch-Balanced-60",
+  "audit_question": "Does the frozen one-candidate C11 result support an L1 research-success claim without implying clean validation, simulation approval or live readiness?",
+  "bound_evidence": {
+    "contract_sha256": "cc87055596c23a28ee53a053f118934759b10273a29d026436d133ac09a4a846",
+    "claim_sha256": "838bb8347abbd684899213a8ac100c30e11e115f38f35ebdc832dd7a4925c1e2",
+    "ledger_sha256": "8a9fa73453970eff30cfcda6861c79b71814087d553207bf5e765980cfddc4df",
+    "result_sha256": "322e004ff0fe652c73b7b1ad78b344a97a82642277a469d682570f6d56987391",
+    "independent_audit_sha256": "55f5181b43fd8aae628caabb43f3aeb3def08d407772640aea056fa6343038e1"
+  },
+  "evidence_stage": "L1-contaminated-formation",
+  "causal_timing": {
+    "verdict": "PASS_FOR_L1_REPLAY",
+    "noninitial_economic_trades": 9,
+    "decision_before_execution_violations": 0,
+    "initialization_exception": "2015-01-05 first-close allocation charges cost and consumes no pre-initialization asset return",
+    "signal_availability": "inherits the frozen two-XSHG-session valuation availability lag and next-common-session execution clock",
+    "limitation": "provider valuation publication semantics and all pre-inception product substitutions remain inherited contaminated evidence, not fresh independent validation"
+  },
+  "accounting": {
+    "verdict": "PASS",
+    "independent_path_metric_recomputation": true,
+    "marked_stress_recomputed_from_pretrade_posttrade_and_EOD_weights": true,
+    "maximum_absolute_weight_sum_tail": "7.5e-40",
+    "minimum_observed_weight": "0",
+    "negative_or_financed_weight_observed": false,
+    "full_L1_turnover_and_cost_convention": true
+  },
+  "candidate_lineage": {
+    "C11_named_candidates": 1,
+    "C11_effective_paths": 1,
+    "prior_C1_through_C10_results_influenced_family_choice": true,
+    "clean_candidate_selection_claim": false,
+    "PBO": "not applicable to the one-candidate C11 run; cross-round meta-PBO is unsupported because this contaminated history is not a unified preregistered selection exercise",
+    "post_result_parameter_repair": false
+  },
+  "frozen_scorecard": {
+    "mandatory_gates_passed": 13,
+    "mandatory_gates_total": 13,
+    "base_net_CAGR": "0.079131819726379376899486557927766732840",
+    "base_maximum_drawdown": "0.2799914513756781545674436136786536154409",
+    "base_Calmar": "0.2826222705642693492603854819974081125169",
+    "high_cost_net_CAGR": "0.077093890093177942809357415306091455332",
+    "extreme_cost_lag_net_CAGR": "0.071227111927613658560681093185253538039",
+    "extreme_cost_lag_maximum_drawdown": "0.2738243158342547428910932717780117688787",
+    "all_scenario_maximum_marked_stress": "0.4206210826846307100065913603340402689098",
+    "base_fixed_E60_net_CAGR": "0.057801748489625729372136429886460323909",
+    "same_average_net_CAGR": "0.070363422055689767075324642012549733198",
+    "zero_enhancement_net_CAGR": "0.063538420822927605104909930970015410986"
+  },
+  "temporal_and_concentration_diagnostics": {
+    "complete_calendar_years_2016_through_2025_positive": "6/10",
+    "complete_calendar_years_beating_fixed_E60": "6/10",
+    "best_calendar_year": {"year": 2019, "return": "0.235079321616176281685238614"},
+    "worst_calendar_year": {"year": 2018, "return": "-0.1486839073106537153511038522"},
+    "maximum_drawdown_period": {"peak": "2015-06-12", "trough": "2016-01-28"},
+    "state_sessions": {"B60": 57, "D60": 774, "M60": 1983},
+    "executed_state_changes": 2,
+    "top_10_days_removed_candidate_CAGR": "0.0455734935825415455992464744367216361607354863395",
+    "top_10_days_removed_fixed_E60_CAGR": "0.0254733491496412016097422593716831734031995117339",
+    "candidate_ending_wealth_retained_after_removing_top_10_days": "0.70273902928475556867777667155668370063201831927607",
+    "fixed_E60_ending_wealth_retained_after_removing_top_10_days": "0.70708955513595538790852545739171032393201831927607",
+    "interpretation": "Best-day concentration is material but proportionally similar to the frozen fixed-E60 baseline; the much larger concern is only two historical state transitions."
+  },
+  "decision_reconciliation": {
+    "research_status": "PASS_RESEARCH_ONLY",
+    "formation_state": "formation-tested-research-only",
+    "simulation_status": "BLOCKED_NOT_EVALUATED",
+    "live_status": "BLOCKED",
+    "clean_OOS_claimed": false,
+    "forward_shadow_claimed": false,
+    "why_not_simulation_approved": [
+      "C11 is a contaminated derivative chosen after seeing C1-C10 history.",
+      "Only two executed style-state transitions exist in the full history.",
+      "No unchanged prospective forward period has been observed.",
+      "Product inception and execution history remain partly proxy-based."
+    ]
+  },
+  "highest_value_next_evidence": "Freeze C11 unchanged and collect new forward-shadow decisions and realized product-level NAV/status evidence; do not open another historical parameter branch merely to raise CAGR.",
+  "integrity_verdict": "The evidence supports the requested L1 research-success threshold and selection of C11 as the current best fixed-pool candidate. It does not support simulation approval, live trading, or an 7.91% forward-return promise."
+}

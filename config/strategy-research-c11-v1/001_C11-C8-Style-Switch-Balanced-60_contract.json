@@ -1,0 +1,147 @@
+{
+  "schema_version": "c11-balanced-60-style-switch-contract-v1",
+  "registered_at_utc": "2026-08-04T02:30:00Z",
+  "research_id": "C11",
+  "canonical_name": "C11-C8-Style-Switch-Balanced-60",
+  "technical_id": "C11-C8STYLE-E60-STRESS44-M1",
+  "stage": "L1-contaminated-bounded-formation",
+  "status_before_run": "PREREGISTERED_NOT_RUN",
+  "delivery_frame": {
+    "outcome": "Determine whether a stable 60% equity budget preserves useful style-switch returns while genuinely passing the 45% marked-stress limit.",
+    "decision_changed": "Select one current fixed-pool research candidate or stop this strategy family.",
+    "binding_constraint": "C10 passed the user's CAGR and drawdown requirements but its 70% equity budget reached 45.7809% marked stress under the frozen ten-session-delay scenario.",
+    "appetite": "one economic candidate, one formal run, no parameter grid",
+    "stop": "Any mandatory gate failure rejects C11 and stops this fixed-pool style-switch family."
+  },
+  "evidence_boundary": {
+    "data_cutoff": "2026-08-03",
+    "C1_through_C10_results_seen": true,
+    "contaminated_formation_only": true,
+    "clean_OOS_validation_or_trading_claim_forbidden": true,
+    "reason_new_candidate_is_not_C10_repair": "The tested belief changes from a 70% aggressive equity risk budget to the user's long-discussed 60/40 strategic risk budget; C10 rules and results remain immutable."
+  },
+  "economic_hypothesis": {
+    "causal_chain": "Point-in-time CSI500 valuation and twelve-month relative total-return leadership identify slow-moving mid-cap versus dividend-low-volatility style preference; a bounded monthly tilt within a fixed 60% equity budget captures part of that persistence, while 30% bonds and 10% cash limit joint-loss exposure.",
+    "why_repeatable": "Valuation mean reversion is slow and style leadership is reinforced by institutional reallocation and investor extrapolation; monthly decisions match that horizon.",
+    "expected_tradeoff": "Lower CAGR than C10 but lower concentration, drawdown and marked-stress risk.",
+    "falsification": "Reject if net base CAGR is below 7.5%, base MDD exceeds 30%, extreme MDD exceeds 40%, any marked-stress path exceeds 45%, or the candidate fails its frozen baselines and ablation controls."
+  },
+  "asset_roles": {
+    "022430": "A500 broad-equity bridge retained at 10% in every state.",
+    "006729": "CSI500 enhanced mid-cap receiver; capped at 40% instead of C10's 50%.",
+    "021550": "Dividend-low-volatility receiver; capped at 40% instead of C10's 50%.",
+    "006662": "First 5% ultra-short-bond defensive receiver released from the C10 equity budget.",
+    "012773": "Second-manager 5% ultra-short-bond defensive receiver.",
+    "007169": "20% policy-bank-bond duration and rate-risk anchor.",
+    "CASH": "10% zero-yield liquidity and settlement buffer."
+  },
+  "inherit_unchanged": {
+    "from_C8_and_C10": [
+      "seven-asset identity and proxy/product mappings",
+      "CSI500 PE/PB 30th and 70th percentile valuation rule",
+      "twelve-calendar-month H00905 versus H20955 relative trend",
+      "two-XSHG-session valuation availability lag",
+      "monthly state clock, next-session execution and strict 5-percentage-point ordinary drift band",
+      "daily marked-weight stress trigger strictly greater than 44%",
+      "Decimal accounting, zero cash yield, distributions, costs and scenario lags",
+      "006729 actual-product splice without pre-inception alpha backfill"
+    ],
+    "only_conceptual_change": "total risk budget and its deterministic target-state mapping"
+  },
+  "target_weights": {
+    "B60": {
+      "022430": "0.10",
+      "006729": "0.25",
+      "021550": "0.25",
+      "006662": "0.05",
+      "012773": "0.05",
+      "007169": "0.20",
+      "CASH": "0.10"
+    },
+    "M60": {
+      "022430": "0.10",
+      "006729": "0.40",
+      "021550": "0.10",
+      "006662": "0.05",
+      "012773": "0.05",
+      "007169": "0.20",
+      "CASH": "0.10"
+    },
+    "D60": {
+      "022430": "0.10",
+      "006729": "0.10",
+      "021550": "0.40",
+      "006662": "0.05",
+      "012773": "0.05",
+      "007169": "0.20",
+      "CASH": "0.10"
+    }
+  },
+  "state_rule": {
+    "B60": "initial balanced state",
+    "M60": "both valuation components at or below their point-in-time 30th percentiles and CSI500 relative trend positive",
+    "D60": "both valuation components at or above their point-in-time 70th percentiles and CSI500 relative trend negative",
+    "otherwise": "retain the previously confirmed state"
+  },
+  "stress_model": {
+    "equity_shock_loss": "0.60",
+    "ultrashort_bond_shock_loss": "0.03",
+    "policy_bank_bond_shock_loss": "0.05",
+    "cash_shock_loss": "0",
+    "target_state_static_loss": "0.373",
+    "maintenance_trigger": "strictly greater than 0.44",
+    "hard_result_limit": "0.45"
+  },
+  "scenarios": {
+    "base-cost25bp-lag1": {"one_way_cost": "0.0025", "lag": 1},
+    "high-cost100bp-lag1": {"one_way_cost": "0.01", "lag": 1},
+    "extreme-cost250bp-lag10": {"one_way_cost": "0.025", "lag": 10}
+  },
+  "nonselectable_controls": {
+    "fixed_E60": "Exact user 35/10/15/5/5/20/10 baseline under identical costs, drift and stress clocks.",
+    "same_average_target": "Base-only static target equal to C11's average confirmed target, with its own identical maintenance clocks.",
+    "zero_enhancement_exact_clock": "Base-only exact C11 executed targets and sessions with post-splice 006729 alpha removed."
+  },
+  "mandatory_gates": {
+    "G01": "economic sessions >= 2521",
+    "G02": "actual mapped 006729 sessions >= 1260",
+    "G03": "base net CAGR >= 0.075",
+    "G04": "base MDD <= 0.30",
+    "G05": "base Calmar >= 0.25",
+    "G06": "extreme net CAGR >= 0.065",
+    "G07": "extreme MDD <= 0.40",
+    "G08": "maximum candidate marked stress across all scenarios <= 0.45",
+    "G09": "maximum target single-fund weight <= 0.40",
+    "G10": "base candidate CAGR > base fixed-E60 CAGR",
+    "G11": "high candidate CAGR > high fixed-E60 CAGR",
+    "G12": "base candidate CAGR > same-average CAGR",
+    "G13": "base candidate CAGR > zero-enhancement exact-clock CAGR"
+  },
+  "known_non_gate_limitations": [
+    "Prior C8/C10 history and metrics influenced the decision to test a 60% risk budget, so this is not clean OOS.",
+    "The inherited combined state path has weak multi-cycle identifiability.",
+    "Pre-inception fund history uses frozen index or bond proxies and cannot prove exact historical product execution.",
+    "A pass is research-only and requires prospective forward evidence before any simulation or capital recommendation."
+  ],
+  "attempt_protocol": {
+    "maximum_economic_runs": 1,
+    "exclusive_claim_before_performance_input_load": true,
+    "parameter_grid_allowed": false,
+    "post_result_rule_or_threshold_change_allowed": false,
+    "failure_stops_family": true
+  },
+  "required_outputs": {
+    "claim": "research/stage-08-c11/001_C11_attempt-1_claim.json",
+    "ledger": "research/stage-08-c11/002_C11_attempt-1_ledger.json",
+    "result": "research/stage-08-c11/003_C11_attempt-1_result.json",
+    "audit": "research/stage-08-c11/004_C11_attempt-1_audit.json",
+    "failure": "research/stage-08-c11/005_C11_attempt-1_failure.json"
+  },
+  "safety": {
+    "read_only_data": true,
+    "account_or_credential_access": false,
+    "broker_or_order_access": false,
+    "real_money_action": false
+  },
+  "design_verdict": "design-ready"
+}
