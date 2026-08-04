@@ -12,6 +12,9 @@ license = {text = "Proprietary - no license granted"}
 authors = [{name = "CN Fund Research Project"}]
 dependencies = []
 
+[project.optional-dependencies]
+pdf = ["reportlab>=4.4,<5"]
+
 [project.scripts]
 cn-fund-research = "cn_fund_strategy.interfaces.public_cli:main"
 

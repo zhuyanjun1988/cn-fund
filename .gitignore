@@ -10,6 +10,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+tmp/
 build/
 dist/
 
@@ -18,6 +19,11 @@ data/
 raw/
 runtime/
 output/
+!output/
+output/*
+!output/pdf/
+output/pdf/*
+!output/pdf/100万标准六四与C11策略实操手册.pdf
 *.sqlite
 *.sqlite3
 *.db
