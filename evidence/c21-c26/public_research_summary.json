@@ -1,0 +1,295 @@
+{
+  "schema_version": "c21-c26-public-research-summary-v1",
+  "published_on": "2026-08-14",
+  "scope": "Sanitized public summary of the C21 through C26 research lineage. Raw third-party market data, account data and machine-specific paths are excluded.",
+  "authority_boundary": {
+    "evidence_class": "contaminated-formation-never-clean-OOS",
+    "clean_oos_claimed": false,
+    "simulation_approved": false,
+    "live_trading_approved": false,
+    "account_accessed": false,
+    "credentials_accessed": false,
+    "orders_submitted": 0,
+    "current_account_action": "NO_AUTOMATIC_SWITCH_FROM_C11",
+    "explanation": "Every historical observation through the candidate freeze was available to the research process. Passing a formation gate freezes a hypothesis for forward observation; it does not authorize a trade."
+  },
+  "strategies": {
+    "C21-Standard-1": {
+      "technical_id": "C21-S1-QG17-E60-G20-B15-C05-M1-B05",
+      "parent_id": "C20",
+      "status": "FROZEN_CONTAMINATED_FORMATION_BASELINE_FORWARD_REQUIRED",
+      "decision": "RETAIN_AS_RETURN_ORIENTED_RESEARCH_BASELINE",
+      "window": {
+        "start": "2015-01-05",
+        "end": "2026-07-06",
+        "sessions": 2794
+      },
+      "target_weights": {
+        "024622_free_cash_flow_equity": "0.23571428571428574",
+        "021550_dividend_low_volatility_equity": "0.19285714285714290",
+        "007593_csi500_quality_growth_equity": "0.17142857142857143",
+        "000216_gold": "0.20000000000000000",
+        "007169_short_policy_bank_bond": "0.15000000000000000",
+        "cash_cny": "0.05000000000000000"
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.10750160155325283",
+        "maximum_drawdown": "0.26637737315648500",
+        "calmar": "0.40356881772424550",
+        "annualized_l1_turnover": "0.11205219987321019"
+      },
+      "high_cost100bp": {
+        "net_cagr": "0.10657029874132129",
+        "maximum_drawdown": "0.26637737315648460",
+        "calmar": "0.40007263934807290"
+      },
+      "extreme_cost250bp": {
+        "net_cagr": "0.10470658490532903",
+        "maximum_drawdown": "0.26637737315648480",
+        "calmar": "0.39307612228692784"
+      },
+      "joint_conservative_discount": {
+        "net_cagr": "0.09787139923537191",
+        "maximum_drawdown": "0.27122963925805400",
+        "calmar": "0.36084330423141870"
+      },
+      "forward_complete_month_ends": 0
+    },
+    "C21-Standard-2": {
+      "technical_id": "C21-S2-C11VRT-QG-RL-T15-E60-G20-B15-C05-M1-B05",
+      "parent_id": "C21-Standard-1",
+      "status": "REJECTED_CONTAMINATED_FORMATION_FACTOR_ROTATION",
+      "decision": "REJECT_AND_CLOSE_LINEAGE",
+      "window": {
+        "start": "2015-01-05",
+        "end": "2026-07-06"
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.104941",
+        "maximum_drawdown": "0.276764",
+        "calmar": "0.3792",
+        "annualized_l1_turnover": "0.174957"
+      },
+      "relative_to_parent": {
+        "cagr_percentage_points": "-0.2560",
+        "maximum_drawdown_percentage_points": "1.0387",
+        "calmar": "-0.0244"
+      }
+    },
+    "C22-Standard-1": {
+      "technical_id": "C22-S1-C21-TIPP-HWM65-M2-E0-65-G15-B15-C05-M1-B05",
+      "parent_id": "C21-Standard-1",
+      "status": "REJECTED_CONTAMINATED_FORMATION_TIPP_TRANSFER",
+      "decision": "REJECT_AS_MAIN_REPLACEMENT_RETAIN_AS_RISK_CONTROL_REFERENCE",
+      "window": {
+        "start": "2015-01-05",
+        "end": "2026-07-06"
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.100038",
+        "maximum_drawdown": "0.237355",
+        "calmar": "0.4215",
+        "annualized_l1_turnover": "0.250250"
+      },
+      "relative_to_parent": {
+        "cagr_percentage_points": "-0.7463",
+        "maximum_drawdown_percentage_points": "-2.9022",
+        "calmar": "0.0179"
+      }
+    },
+    "C23-Standard-1": {
+      "freeze_hash": "7a8942078cd239b855f58c615fed3bda4e692cdac0949edc7761ac735ba5a48e",
+      "parent_id": "C21-Standard-1",
+      "status": "LIMITED_WINDOW_MATERIAL_FORMATION_BREAKTHROUGH_WITH_CONCENTRATION_WARNING",
+      "decision": "FREEZE_FOR_FORWARD_OBSERVATION_ONLY",
+      "window": {
+        "start": "2019-01-22",
+        "end": "2026-07-06",
+        "sessions": 1805,
+        "warning": "The window excludes the 2015 A-share crash and is not comparable with the full C21/C11 windows."
+      },
+      "target_weights": {
+        "024622_free_cash_flow_equity": "0.23571428571428570",
+        "021550_dividend_low_volatility_equity": "0.19285714285714287",
+        "007593_csi500_quality_growth_equity": "0.12142857142857143",
+        "007474_chinext_momentum_growth_equity": "0.05000000000000000",
+        "000216_gold": "0.20000000000000000",
+        "007169_short_policy_bank_bond": "0.15000000000000000",
+        "cash_cny": "0.05000000000000000"
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.13827229804709673",
+        "maximum_drawdown": "0.10169465243347664",
+        "calmar": "1.35968111142862000",
+        "annualized_l1_turnover": "0.09454964461403542"
+      },
+      "actual_007474_nav_sensitivity": {
+        "start": "2019-07-29",
+        "net_cagr": "0.12893107504494060",
+        "maximum_drawdown": "0.10371919022432907",
+        "calmar": "1.24307830369753200"
+      },
+      "forward_cutoff_earliest": "2026-08-13",
+      "forward_complete_month_ends": 0,
+      "forward_required_month_ends": 12
+    },
+    "C24-Standard-1": {
+      "freeze_hash": "e0fa9deb31b0447e69c5cac4cbaeb27ad06a5b47fc6d7d4af0793267733a7095",
+      "parent_id": "C23-Standard-1",
+      "status": "REJECTED_CONTAMINATED_FORMATION_CONVEXITY_BRIDGE",
+      "decision": "REJECT_AND_CLOSE_LINEAGE",
+      "changed_component": "Add a 10 percent convertible-bond bridge while reducing quality-growth and short policy-bank-bond sleeves.",
+      "window": {
+        "start": "2019-01-22",
+        "end": "2026-07-06",
+        "sessions": 1805
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.13631951285743504",
+        "maximum_drawdown": "0.09842705408507580",
+        "calmar": "1.38498011674317480"
+      },
+      "relative_to_parent": {
+        "cagr_percentage_points": "-0.1953",
+        "maximum_drawdown_percentage_points": "-0.3268",
+        "calmar": "0.0253"
+      }
+    },
+    "C25-Standard-1": {
+      "technical_id": "C25-C23-GEM05-SMA10-BOND-OFF-M2",
+      "parent_id": "C23-Standard-1",
+      "status": "REJECTED_CONTAMINATED_FORMATION_AI_OPTIONALITY_TREND_GATE",
+      "decision": "REJECT_AND_CLOSE_LINEAGE",
+      "changed_component": "Apply a monthly SMA10 risk gate only to the 5 percent 007474 sleeve and park that sleeve in bonds when risk-off.",
+      "window": {
+        "start": "2019-11-04",
+        "end": "2026-07-06",
+        "sessions": 1617
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.12954196095413706",
+        "maximum_drawdown": "0.09709738361221154",
+        "calmar": "1.33414471260629420",
+        "annualized_l1_turnover": "0.23873087241244162"
+      },
+      "relative_to_parent_same_window": {
+        "cagr_percentage_points": "-0.3175",
+        "maximum_drawdown_percentage_points": "-0.4597",
+        "calmar": "0.0291"
+      }
+    },
+    "C26-Standard-1": {
+      "technical_id": "C26-C23-LONGGB15-003376-M1",
+      "parent_id": "C23-Standard-1",
+      "status": "FROZEN_CONTAMINATED_FORMATION_BREAKTHROUGH_FORWARD_VALIDATION_REQUIRED",
+      "decision": "FREEZE_FOR_FORWARD_OBSERVATION_ONLY",
+      "changed_component": "Replace C23's 15 percent 007169 short policy-bank-bond sleeve with 15 percent 003376 7-10 year policy-bank-bond index fund.",
+      "window": {
+        "start": "2019-01-22",
+        "end": "2026-07-06",
+        "sessions": 1805,
+        "warning": "The window excludes the 2015 A-share crash and favors the observed gold-duration combination."
+      },
+      "target_weights": {
+        "024622_free_cash_flow_equity": "0.23571428571428570",
+        "021550_dividend_low_volatility_equity": "0.19285714285714287",
+        "007593_csi500_quality_growth_equity": "0.12142857142857143",
+        "007474_chinext_momentum_growth_equity": "0.05000000000000000",
+        "000216_gold": "0.20000000000000000",
+        "003376_long_policy_bank_bond": "0.15000000000000000",
+        "cash_cny": "0.05000000000000000"
+      },
+      "base_cost25bp": {
+        "net_cagr": "0.14206761871142470",
+        "maximum_drawdown": "0.09939770511213986",
+        "calmar": "1.42928469576983620",
+        "annualized_l1_turnover": "0.10973642833740116"
+      },
+      "relative_to_c23_same_window": {
+        "cagr_percentage_points": "0.3795",
+        "maximum_drawdown_percentage_points": "-0.2297",
+        "calmar": "0.0696"
+      },
+      "future_long_bond_minus_1pct_annual_stress": {
+        "net_cagr": "0.14062965799205807",
+        "maximum_drawdown": "0.09960884598429942",
+        "calmar": "1.41181896650247740"
+      },
+      "one_day_long_bond_minus_10pct_stress": {
+        "net_cagr": "0.13973454127820406",
+        "maximum_drawdown": "0.11329767043566419",
+        "calmar": "1.23333993312379700"
+      },
+      "static_stress": {
+        "normal_loss": "0.32200000000000006",
+        "extreme_loss": "0.44250000000000000"
+      },
+      "forward_complete_month_ends": 0,
+      "product_execution_status": "BLOCKED_UNTIL_CURRENT_CHANNEL_LIMIT_FEE_AND_SUBSCRIPTION_STATUS_ARE_VERIFIED"
+    }
+  },
+  "free_cash_flow_history_boundary": {
+    "index_code": "932365CNY010",
+    "index_name": "CSI All Share Free Cash Flow Total Return Index",
+    "index_base_date": "2013-12-31",
+    "index_launch_date": "2024-12-11",
+    "fund_code": "024622",
+    "fund_actual_nav_start": "2025-07-08",
+    "limited_window_2019_01_22_to_2026_07_06": {
+      "total_common_sessions": 1805,
+      "pre_index_launch_provider_backfill_sessions": 1427,
+      "post_launch_pre_fund_sessions": 138,
+      "actual_fund_nav_sessions_used": 240,
+      "pre_launch_fraction": "0.7905817174515235",
+      "pre_fund_fraction": "0.8670360110803324"
+    },
+    "implemented_bridge": "Use the official total-return index path with a 0.60 percent annual implementation drag before the fund splice; use accumulated fund NAV returns after the fund inception boundary.",
+    "interpretation": "The long history is an economic counterfactual for the index methodology, not the historical performance of fund 024622 and not evidence that an investor could have owned the product before launch.",
+    "existing_c12_sensitivity": {
+      "source_status": "DIRECTIONAL_DIAGNOSTIC_ONLY_FROM_A_C12_CANDIDATE_REJECTED_FOR_AN_UNRELATED_RED_INDEX_IDENTITY_MISMATCH",
+      "base": {
+        "net_cagr": "0.10478",
+        "maximum_drawdown": "0.31570",
+        "calmar": "0.332"
+      },
+      "pre_fund_extra_minus_2pct_annual": {
+        "net_cagr": "0.09781",
+        "maximum_drawdown": "0.31768",
+        "calmar": "0.308"
+      },
+      "pre_fund_extra_minus_4pct_annual": {
+        "net_cagr": "0.08959",
+        "maximum_drawdown": "0.31966",
+        "calmar": "0.280"
+      }
+    },
+    "c26_specific_minus_2_and_minus_4_sensitivity_completed": false,
+    "consequence": "C26's absolute 14.21 percent formation CAGR must be discounted and cannot be used to claim superiority over C11. The C26-versus-C23 local delta is less confounded because both candidates share the same free-cash-flow path. C12 sensitivity figures are directional only because that C12 candidate was rejected for a separate red-index identity mismatch."
+  },
+  "source_bindings": {
+    "C21_protocol_sha256": "aaba57007c1c90784aacbc5a89e57caa5bdd3ac0c89a6c7bf64cee193d0a7698",
+    "C21_result_sha256": "cb84bcec9ba5d69a99af835f0664185f7c59d33b7678417689c4474d77a344cf",
+    "C21_decision_sha256": "b13eebc5540918db555e1cbe3edfa14c50d7e1133cd65d9fc67df74da96d4ac0",
+    "C21_acceptance_sha256": "f2158ddddd6627805423a9a8cb05f49c0f5370311468bc6a1a42810d77b46858",
+    "C21S2_protocol_sha256": "71f04143c834f2d60461f4f5fcada72309b37f117228248d3d059c78138c45a1",
+    "C21S2_rejection_sha256": "6ab65199bdfdcb6ded68a06884fddb1ba0a1a4445737e85a3edbf10864791da9",
+    "C22_protocol_sha256": "876b5b793cac8885022193641243e26c6dabb6482ce4203863fc002867a4bde1",
+    "C22_rejection_sha256": "94f35aa616be4244532dfcbd61f46a3ec1048f0134d0664929343ea0926c45d3",
+    "C23_protocol_sha256": "7a8942078cd239b855f58c615fed3bda4e692cdac0949edc7761ac735ba5a48e",
+    "C23_result_sha256": "1144f59d0bd3df06737f1d077be6b1c9dfe65f5c1663f125b9e22db740ed184e",
+    "C23_evaluation_sha256": "67b247102ff04899d7ff0099bf24eaef313c933b0dd5998e51ebf376c442c9d0",
+    "C23_acceptance_sha256": "16ef9b0f6225df9d91cf74a505e0f9f7dad0709fb1300d12b1e46ccea2cc51ee",
+    "C24_protocol_sha256": "e0fa9deb31b0447e69c5cac4cbaeb27ad06a5b47fc6d7d4af0793267733a7095",
+    "C24_result_sha256": "f60b9f95f65f34e395ed76d06bebb740a74837463b60c7a656d9f71844c214e2",
+    "C25_protocol_sha256": "42af1deb7beec6667e252b81b00be0aa78654be930491007155bd5f3d3e6e0ef",
+    "C25_result_sha256": "a4081366857b6e194d5995b2b6d66e4adcb07df4422108d8e4a953f0712aabae",
+    "C26_protocol_sha256": "4c859c3d5722d86239f01ff8eb3c43e2894d2ff930e4e05c2df98f1458f12abe",
+    "C26_result_sha256": "a1bac5d760508d2dbfc5b361891dc31af25ed7ffd65ab51f911e12cdc52aa1ef",
+    "C26_evaluation_sha256": "6bd844db06a125204f1b07fcc699dc6cffd149080e6a1f3a575c5d3504b02e2c",
+    "C26_acceptance_sha256": "d63f1ea8adbd786e389fc817ee1d63946ac2d599a22386592c133e25bd232f93",
+    "FCF_official_total_return_capture_sha256": "f6ea6204f65944c42c6619cc566e57c16fd4e29cb935586fb43ebae847e0e347",
+    "024622_nav_capture_sha256": "6019708a865cdde9b637a2486d01d14fc62570f4a938116402b8e94a05d036da",
+    "C12_splice_implementation_sha256": "bf1dbf1a724c6b62a9762653d096b51f89494e9aa6ceee3578144f0ccc9f226d",
+    "C12_sensitivity_report_sha256": "968aafc543061cd0d93dc272e591bf5f2b13d3ef708d477d44aafd03171288b4"
+  }
+}

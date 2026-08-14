@@ -1,0 +1,74 @@
+{
+  "schema_version": "strategy-lineage-v1",
+  "as_of": "2026-08-14",
+  "relations": [
+    {
+      "source_id": "Fixed-E60-35-10-15-5-5-20-10",
+      "target_id": "C11-C8-Style-Switch-Balanced-60",
+      "relation": "derivative",
+      "effective_time": "2026-08-04",
+      "reason": "C11 preserves the 60 percent equity budget and changes only the monthly style allocation.",
+      "evidence_hash": "04335a02f0dc122cb329dc9ca964997c67bef1ccd73df0a9ebcb1376704089f6"
+    },
+    {
+      "source_id": "C21-Standard-1",
+      "target_id": "C21-Standard-2",
+      "relation": "rejected-neighbor",
+      "effective_time": "2026-08-12",
+      "reason": "Factor rotation worsened both return and drawdown versus the static parent.",
+      "evidence_hash": "6ab65199bdfdcb6ded68a06884fddb1ba0a1a4445737e85a3edbf10864791da9"
+    },
+    {
+      "source_id": "C21-Standard-1",
+      "target_id": "C22-Standard-1",
+      "relation": "rejected-neighbor",
+      "effective_time": "2026-08-12",
+      "reason": "TIPP reduced drawdown but failed the frozen return-efficiency breakthrough rule.",
+      "evidence_hash": "94f35aa616be4244532dfcbd61f46a3ec1048f0134d0664929343ea0926c45d3"
+    },
+    {
+      "source_id": "C21-Standard-1",
+      "target_id": "C23-Standard-1",
+      "relation": "derivative",
+      "effective_time": "2026-08-12",
+      "reason": "Five percentage points of quality growth were replaced by a static ChiNext momentum-growth satellite.",
+      "evidence_hash": "16ef9b0f6225df9d91cf74a505e0f9f7dad0709fb1300d12b1e46ccea2cc51ee"
+    },
+    {
+      "source_id": "C23-Standard-1",
+      "target_id": "C24-Standard-1",
+      "relation": "rejected-neighbor",
+      "effective_time": "2026-08-12",
+      "reason": "The convertible-bond bridge failed both frozen breakthrough paths.",
+      "evidence_hash": "f60b9f95f65f34e395ed76d06bebb740a74837463b60c7a656d9f71844c214e2"
+    },
+    {
+      "source_id": "C23-Standard-1",
+      "target_id": "C25-Standard-1",
+      "relation": "rejected-neighbor",
+      "effective_time": "2026-08-12",
+      "reason": "The satellite trend gate reduced risk too little for its return and turnover cost.",
+      "evidence_hash": "a4081366857b6e194d5995b2b6d66e4adcb07df4422108d8e4a953f0712aabae"
+    },
+    {
+      "source_id": "C23-Standard-1",
+      "target_id": "C26-Standard-1",
+      "relation": "derivative",
+      "effective_time": "2026-08-12",
+      "reason": "The short policy-bank-bond sleeve was replaced by the same-sized long-duration fund 003376 sleeve.",
+      "evidence_hash": "d63f1ea8adbd786e389fc817ee1d63946ac2d599a22386592c133e25bd232f93"
+    }
+  ],
+  "non_supersession": [
+    {
+      "candidate_id": "C23-Standard-1",
+      "does_not_supersede": "C11-C8-Style-Switch-Balanced-60",
+      "reason": "Limited 2019-2026 window, backfilled factor history and zero complete post-freeze month-ends."
+    },
+    {
+      "candidate_id": "C26-Standard-1",
+      "does_not_supersede": "C11-C8-Style-Switch-Balanced-60",
+      "reason": "Limited 2019-2026 window, free-cash-flow backfill sensitivity incomplete and zero complete post-freeze month-ends."
+    }
+  ]
+}
