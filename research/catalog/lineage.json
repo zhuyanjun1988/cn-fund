@@ -1,6 +1,6 @@
 {
   "schema_version": "strategy-lineage-v1",
-  "as_of": "2026-08-14",
+  "as_of": "2026-08-15",
   "relations": [
     {
       "source_id": "Fixed-E60-35-10-15-5-5-20-10",
@@ -81,6 +81,30 @@
       "effective_time": "2026-08-14",
       "reason": "For the user's explicitly requested higher-offense domestic research target, C45 passed frozen same-window C11 replacement, route, stress, structure and strategic product gates; existing lots still require a phased fee-aware transition and no order is authorized.",
       "evidence_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e"
+    },
+    {
+      "source_id": "C45-Aggressive-1",
+      "target_id": "C45-Aggressive-2",
+      "relation": "rejected-neighbor",
+      "effective_time": "2026-08-15",
+      "reason": "A five-percent actual ChiNext satellite added negligible formation CAGR while worsening MDD, Calmar and rolling-three-year outcomes, so the branch is permanently rejected without adjacent-weight rescue.",
+      "evidence_hash": "b2f05879f7cbd7df13f4a100dc9fa12368030188e2d679fac473248901658c78"
+    },
+    {
+      "source_id": "C45-Aggressive-1",
+      "target_id": "C46-Aggressive-1",
+      "relation": "derivative",
+      "effective_time": "2026-08-15",
+      "reason": "C46 keeps C45's sixty-percent equity, twenty-percent gold and fifteen-percent long-duration budgets and changes only the five-percent cash sleeve to three percent carry, one percent short policy-bank debt and one percent cash.",
+      "evidence_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9"
+    },
+    {
+      "source_id": "C45-Aggressive-1",
+      "target_id": "C46-Aggressive-1",
+      "relation": "optimized-research-successor",
+      "effective_time": "2026-08-15",
+      "reason": "For a complexity-tolerant higher-offense user with a separate household emergency reserve, C46 passed all frozen incremental, risk, independent-accounting, structure and product-health gates; C45 remains the simpler higher-offense default and no order is authorized.",
+      "evidence_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9"
     }
   ],
   "non_supersession": [
@@ -98,6 +122,16 @@
       "candidate_id": "C45-Aggressive-1",
       "does_not_supersede": "C44-Standard-1",
       "reason": "C45 has higher formation-period CAGR and higher nominal equity, while C44 retains lower drawdown and slightly higher Calmar and therefore remains the default for most people."
+    },
+    {
+      "candidate_id": "C46-Aggressive-1",
+      "does_not_supersede": "C44-Standard-1",
+      "reason": "C46 has higher formation-period CAGR, while C44 retains lower MDD, slightly higher Calmar, five percentage points of internal cash and materially simpler product maintenance."
+    },
+    {
+      "candidate_id": "C46-Aggressive-1",
+      "does_not_supersede": "C45-Aggressive-1-for-all-users",
+      "reason": "The 0.236 percentage-point formation CAGR gain adds four fund routes, current-manager, credit and convertible risk and reduces internal cash from five to one percent."
     }
   ]
 }

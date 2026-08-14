@@ -1,6 +1,6 @@
 {
   "schema_version": "strategy-research-round-index-v1",
-  "as_of": "2026-08-14",
+  "as_of": "2026-08-15",
   "rounds": [
     {
       "round_id": "ROUND-G6",
@@ -186,6 +186,40 @@
       "rejection_reason": null,
       "artifact_root": "evidence/c45",
       "seal_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e",
+      "contaminated": true,
+      "invalid_run": false
+    },
+    {
+      "round_id": "ROUND-C45-A2",
+      "preregistration_hash": "67644e6dc88c8b423f28c2ea3e9d856363195b38149e96f3bf381d8cddb89442",
+      "hypothesis": "A fixed five-percent actual ChiNext satellite can add a forward-looking growth return source without breaking C45's risk budget.",
+      "component_changed": "Replace five percentage points of quality-growth equity with actual 159915; total equity remains sixty percent",
+      "candidate_family": "C45-Aggressive-2",
+      "candidate_count": 1,
+      "formation_result": "CAGR improved only 0.0235 percentage points, while MDD worsened 0.1793 points, Calmar fell 0.0020 and worst rolling-three-year CAGR worsened 0.9826 points versus C45.",
+      "validation_opened": false,
+      "selected_id": null,
+      "final_decision": "REJECTED_CONTAMINATED_FORMATION_GROWTH_SATELLITE_NO_RESCUE",
+      "rejection_reason": "The candidate failed the frozen absolute CAGR and Calmar gates, the incremental return, Calmar and ending-NAV gates, and multiple return-path stresses.",
+      "artifact_root": "evidence/c46",
+      "seal_hash": "b2f05879f7cbd7df13f4a100dc9fa12368030188e2d679fac473248901658c78",
+      "contaminated": true,
+      "invalid_run": false
+    },
+    {
+      "round_id": "ROUND-C46-A1",
+      "preregistration_hash": "4e84c20fc88f38f0c0a2ced4c81ee599550f939436cd2b13848212bb5c4b3281",
+      "hypothesis": "Replacing four percentage points of C45's modeled-zero cash with three one-percent manager-diversified carry routes and one percent short policy-bank debt can add return without increasing nominal equity or breaking risk limits.",
+      "component_changed": "Only C45's five-percent cash sleeve becomes three percent fixed-income-plus, one percent short policy-bank debt and one percent cash",
+      "candidate_family": "C46",
+      "candidate_count": 1,
+      "formation_result": "Versus C45, CAGR improved 0.2362 percentage points, MDD improved 0.0688 points, Calmar improved 0.0102 and ending NAV improved 2.3825%; every frozen absolute, incremental, cost, delay, return-source, date, role-stress, independent-accounting, structure and product-health gate passed.",
+      "validation_opened": false,
+      "selected_id": "C46-Aggressive-1",
+      "final_decision": "CONTAMINATED_FORMATION_MAJOR_BREAKTHROUGH_OPTIMIZED_HIGHER_OFFENSE_FORWARD_REQUIRED_NOT_UNIVERSAL_C45_REPLACEMENT",
+      "rejection_reason": null,
+      "artifact_root": "evidence/c46",
+      "seal_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9",
       "contaminated": true,
       "invalid_run": false
     }

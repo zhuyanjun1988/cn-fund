@@ -1,0 +1,121 @@
+{
+  "schema_version": "c46-public-contract-v1",
+  "candidate_id": "C46-Aggressive-1",
+  "canonical_name": "C46-Aggressive-1",
+  "descriptive_name_cn": "C46六成权益与三层流动性收益增强进取策略",
+  "technical_id": "C46-E60-G20-DUR15-CARRY3-SCDB1-CASH1-M3",
+  "parent_id": "C45-Aggressive-1",
+  "contract_frozen_before_one_shot_run": true,
+  "internal_frozen_contract_sha256": "4e84c20fc88f38f0c0a2ced4c81ee599550f939436cd2b13848212bb5c4b3281",
+  "evidence_class": "contaminated-formation-repeated-window-current-survivor-and-manager-selection-never-clean-OOS",
+  "economic_hypothesis": "Keep C45's exact sixty-percent equity, twenty-percent gold and fifteen-percent long-duration budgets, but replace four percentage points of modeled-zero cash with three independently managed one-percent fixed-income-plus routes and one percent short policy-bank debt while retaining one percent operational cash.",
+  "single_conceptual_change_from_parent": "Only the five-percent C45 cash sleeve changes: three percent becomes a three-manager carry ladder, one percent becomes short policy-bank debt and one percent remains cash.",
+  "why_not_more_equity": "C45 already holds sixty percent nominal equity and the rejected C45-Aggressive-2 five-percent ChiNext experiment added only 0.0235 percentage points of CAGR while worsening drawdown, Calmar and rolling-three-year results.",
+  "target_weights": {
+    "024622_free_cash_flow_factor": "0.23571428571428570",
+    "021550_dividend_low_volatility": "0.19285714285714287",
+    "007593_CSI500_quality_growth": "0.17142857142857143",
+    "000216_gold": "0.20000000000000000",
+    "003376_long_policy_bank_bond_current_route": "0.15000000000000000",
+    "000047_fixed_income_plus": "0.01000000000000000",
+    "110008_fixed_income_plus": "0.01000000000000000",
+    "110017_fixed_income_plus": "0.01000000000000000",
+    "007169_short_policy_bank_bond_current_route": "0.01000000000000000",
+    "cash_cny": "0.01000000000000000"
+  },
+  "historical_availability_routes": {
+    "long_duration": "Use actual 511010 NAV before 003376 is observable, then charge a costed next-common-session transition to 003376.",
+    "short_policy_bank_debt": "Use the H00140 total-return proxy net of 30bp annual fee before 007169 is available, then charge a costed transition to actual 007169 accumulated NAV.",
+    "current_investor_rule": "Historical bridge instruments are evidence plumbing, not current targets. Current targets are 003376 and 007169 after same-session product and channel checks."
+  },
+  "decision_rule": {
+    "observation_clock": "After all natural month-end common-session NAVs are knowable",
+    "drift_trigger_absolute_percentage_points": "5.0",
+    "action_below_trigger": "HOLD",
+    "action_at_or_above_trigger": "Restore every sleeve to its frozen target",
+    "execution_clock": "Next common NAV or subscription session after the decision date",
+    "new_cash_rule": "Fund underweight sleeves first before creating avoidable redemptions",
+    "unknown_input_or_product_state": "FAIL_CLOSED"
+  },
+  "cost_and_delay_protocol": {
+    "base_one_way_l1_cost": "0.0025",
+    "high_one_way_l1_cost": "0.0100",
+    "extreme_one_way_l1_cost": "0.0250",
+    "primary_execution_lag_common_sessions": 1,
+    "delay_stress_common_sessions": 2,
+    "turnover_definition": "Cost is charged to half-L1 one-way traded notional; full-L1 turnover is twice that value."
+  },
+  "frozen_absolute_gates": {
+    "base_CAGR_min": "0.1130",
+    "base_maximum_drawdown_max": "0.2700",
+    "base_Calmar_min": "0.4260",
+    "high_cost_CAGR_min": "0.1095",
+    "extreme_cost_CAGR_min": "0.1055",
+    "lag_two_CAGR_min": "0.1115",
+    "worst_calendar_year_min": "-0.1500",
+    "worst_rolling_three_year_CAGR_min": "-0.0300"
+  },
+  "frozen_incremental_gates_vs_C45": {
+    "CAGR_advantage_min_percentage_points": "0.20",
+    "maximum_drawdown_deterioration_max_percentage_points": "0.75",
+    "Calmar_advantage_min": "0.002",
+    "ending_NAV_advantage_min_fraction": "0.02",
+    "worst_calendar_year_deterioration_max_percentage_points": "0.75",
+    "worst_rolling_three_year_deterioration_max_percentage_points": "0.75"
+  },
+  "deterministic_role_stress": {
+    "normal_loss": "0.3254000000000000000",
+    "normal_loss_limit": "0.35",
+    "extreme_loss": "0.4495000000000000000",
+    "extreme_loss_limit": "0.45",
+    "extreme_headroom_percentage_points": "0.05",
+    "warning": "These are deterministic simultaneous role shocks, not VaR, probabilities or a guaranteed maximum loss."
+  },
+  "pre_performance_correction": {
+    "initial_four_percent_equal_carry_structure_rejected": true,
+    "reason": "Applying the already frozen route-specific 25%, 20% and 20% extreme shocks produced a 45.1167% loss, above the 45% ceiling.",
+    "corrected_structure_frozen_before_performance": "Three percent carry, one percent short policy-bank debt and one percent cash.",
+    "correction_evidence_sha256": "03183f4423aff8ddd3a25c808d13b42a9150ff145f0676f09dad1f4947ef9d80",
+    "rejected_structure_may_not_be_revived": true
+  },
+  "negative_precursor": {
+    "candidate_id": "C45-Aggressive-2",
+    "change": "Replace five percentage points of quality-growth equity with actual 159915 ChiNext exposure.",
+    "decision": "PERMANENTLY_REJECTED_NO_RESCUE_ON_THIS_WINDOW",
+    "result_sha256": "b2f05879f7cbd7df13f4a100dc9fa12368030188e2d679fac473248901658c78"
+  },
+  "run_budget": {
+    "formal_numeric_candidates": 1,
+    "parameter_grid_allowed": false,
+    "neighboring_weight_rescue_allowed": false,
+    "alternative_manager_or_product_rescue_allowed": false,
+    "post_result_old_sample_search_stopped": true
+  },
+  "selection_and_integrity_disclosure": {
+    "same_2015_2026_window_reused": true,
+    "carry_history_visible_before_design": true,
+    "three_current_survivor_managers_selected_with_full_history_visible": true,
+    "factor_histories_include_pre_publication_or_pre_fund_backfill": true,
+    "clean_OOS_claim_allowed": false,
+    "simulation_or_live_approval_allowed_from_this_run": false
+  },
+  "authority_boundary": {
+    "account_access_allowed": false,
+    "credentials_access_allowed": false,
+    "orders_allowed": false,
+    "order_session_ready": false,
+    "existing_C11_first_batch": "HOLD_PENDING_ACTUAL_LOT_FEE_AND_CHANNEL_REVIEW",
+    "existing_C11_second_batch": "WAIT"
+  },
+  "source_bindings": {
+    "internal_frozen_contract_sha256": "4e84c20fc88f38f0c0a2ced4c81ee599550f939436cd2b13848212bb5c4b3281",
+    "internal_research_code_sha256": "3562fb4a252d78cc96a4b71f38fef3d203e4021e94c4372d61317669be6ec07c",
+    "internal_numeric_result_sha256": "5d51519acf78cda2ba5a729729bd412593417bb6fc5f79b857e5f4fec919ecd8",
+    "independent_verifier_v1_code_sha256": "51da9341b31b2338ba749701aae72dee7ebd179c3239393c16cd71bf6194f02d",
+    "independent_verifier_v1_failed_result_sha256": "b5c631e9071aa5202f16d2dcfb6f741d7e57b951d26f4a94c34465f8b4f728e1",
+    "independent_correction_contract_sha256": "f2f5b1ec7e14cc2e05e77ebc6ad52e6c8bb30b2d2a4e3466f9fe8941d5dce6c8",
+    "independent_verifier_v2_code_sha256": "94ed08635dc21fd5606bbd37e59ddf68b7ed743ac18e9b38b87ce2813cc08ebc",
+    "independent_corrected_result_sha256": "5a30696596a7085d43e69876be4a0b5e2cdfbb27f2fdfcb447b53e603b7d4cd8",
+    "current_product_structure_decision_sha256": "444b74f46624fe073e2db97b5afd952c100b57a216ea3231f65f0283dbc850dd"
+  }
+}

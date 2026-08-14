@@ -1,0 +1,341 @@
+{
+  "schema_version": "c46-public-research-summary-v1",
+  "published_on": "2026-08-15",
+  "candidate_id": "C46-Aggressive-1",
+  "canonical_name": "C46-Aggressive-1",
+  "descriptive_name_cn": "C46六成权益与三层流动性收益增强进取策略",
+  "technical_id": "C46-E60-G20-DUR15-CARRY3-SCDB1-CASH1-M3",
+  "parent_id": "C45-Aggressive-1",
+  "authority_boundary": {
+    "evidence_class": "contaminated-formation-repeated-window-current-survivor-and-manager-selection-never-clean-OOS",
+    "major_formation_breakthrough_confirmed": true,
+    "research_successor_to_C45_for_complexity_tolerant_higher_offense_user": true,
+    "universal_replacement_of_C45": false,
+    "default_for_most_people": "C44-Standard-1",
+    "default_higher_offense_simple": "C45-Aggressive-1",
+    "default_higher_offense_optimized_with_external_emergency_cash": "C46-Aggressive-1",
+    "current_account_action": "HOLD_EXISTING_FIRST_C11_BATCH_AND_WAIT_ON_SECOND_BATCH_PENDING_ACTUAL_LOT_FEE_AND_CHANNEL_CHECKS",
+    "immediate_full_liquidation_authorized": false,
+    "order_ready": false,
+    "clean_oos_claimed": false,
+    "simulation_approved": false,
+    "live_trading_approved": false,
+    "account_accessed": false,
+    "credentials_accessed": false,
+    "orders_submitted": 0
+  },
+  "window": {
+    "start": "2015-01-05",
+    "end": "2026-07-06",
+    "common_sessions": 2794,
+    "warning": "The same 2015-2026 history was repeatedly used during asset, product and strategy research. Current surviving managers were selected with full history visible, and factor histories include pre-publication or pre-fund counterfactual paths. This is contaminated formation evidence, not a holdout."
+  },
+  "target_weights": {
+    "024622_free_cash_flow_factor": "0.23571428571428570",
+    "021550_dividend_low_volatility": "0.19285714285714287",
+    "007593_CSI500_quality_growth": "0.17142857142857143",
+    "000216_gold": "0.20000000000000000",
+    "003376_long_policy_bank_bond_current_route": "0.15000000000000000",
+    "000047_fixed_income_plus": "0.01000000000000000",
+    "110008_fixed_income_plus": "0.01000000000000000",
+    "110017_fixed_income_plus": "0.01000000000000000",
+    "007169_short_policy_bank_bond_current_route": "0.01000000000000000",
+    "cash_cny": "0.01000000000000000"
+  },
+  "model_amounts_per_CNY_1000000": {
+    "024622": "235714.29",
+    "021550": "192857.14",
+    "007593": "171428.57",
+    "000216": "200000.00",
+    "003376": "150000.00",
+    "000047": "10000.00",
+    "110008": "10000.00",
+    "110017": "10000.00",
+    "007169": "10000.00",
+    "cash_cny": "10000.00"
+  },
+  "economic_roles": {
+    "024622": "Free-cash-flow, value and profitability-quality equity core",
+    "021550": "Dividend-value and low-volatility equity stabilizer",
+    "007593": "Mid-cap quality-growth and earnings-change diversifier",
+    "000216": "Monetary, inflation and geopolitical diversifier; not cash or fixed income",
+    "003376": "Long-duration policy-bank debt for term premium and recession or disinflation convexity; not principal-guaranteed cash",
+    "000047": "First one-percent fixed-income-plus carry route with credit, convertible and bounded-equity risk",
+    "110008": "Second one-percent fixed-income-plus carry route; currently the largest stock look-through of the three",
+    "110017": "Third one-percent fixed-income-plus carry route with credit, convertible and bounded-equity risk",
+    "007169": "One-percent lower-duration policy-bank-debt liquidity middle layer",
+    "cash_cny": "One-percent operational buffer; not a household emergency reserve"
+  },
+  "execution_rule": {
+    "decision_frequency": "monthly",
+    "drift_trigger_absolute_percentage_points": "5.0",
+    "primary_execution_lag_common_sessions": 1,
+    "below_trigger": "HOLD",
+    "at_or_above_trigger": "REBALANCE_ALL_SLEEVES_TO_TARGET",
+    "historical_rebalance_count": 7,
+    "historical_route_switch_count": 2,
+    "annualized_half_L1_one_way_notional": "0.15651232362948306",
+    "annualized_full_L1_turnover": "0.31302464725896610",
+    "new_cash_rule": "FILL_UNDERWEIGHTS_FIRST",
+    "unknown_state_rule": "FAIL_CLOSED"
+  },
+  "historical_availability_routes": {
+    "long_duration": "Actual 511010 NAV before a costed next-session transition to actual 003376 NAV.",
+    "short_policy_bank_debt": "H00140 total return net of 30bp annual fee before a costed transition to actual 007169 accumulated NAV.",
+    "current_target_routes": ["003376", "007169"],
+    "warning": "Historical bridge instruments are not current target purchases."
+  },
+  "formation_metrics": {
+    "base_cost25bp_lag1": {
+      "net_cagr": "0.11326680443925174",
+      "maximum_drawdown": "0.26123474399296420",
+      "calmar": "0.43358246574698480",
+      "annualized_volatility": "0.12928937143141590",
+      "worst_calendar_year": "-0.08781378126068518",
+      "worst_rolling_three_year_cagr": "-0.010521927932880315",
+      "ending_nav": "3.2859431294558643",
+      "drawdown_peak": "2015-06-12",
+      "drawdown_trough": "2016-01-28",
+      "drawdown_recovery": "2017-08-21"
+    },
+    "high_cost100bp_lag1": {
+      "net_cagr": "0.11195579543926648",
+      "maximum_drawdown": "0.26123474399296420",
+      "calmar": "0.42856395641722820"
+    },
+    "extreme_cost250bp_lag1": {
+      "net_cagr": "0.10932023132896718",
+      "maximum_drawdown": "0.26123474399296365",
+      "calmar": "0.41847508358961516"
+    },
+    "base_cost25bp_lag2": {
+      "net_cagr": "0.11321031831513562",
+      "maximum_drawdown": "0.25840050180928387",
+      "calmar": "0.43811957609390440"
+    }
+  },
+  "comparisons": {
+    "C45_same_window_base25bp_lag1": {
+      "net_cagr": "0.11090511770199707",
+      "maximum_drawdown": "0.26192235938374030",
+      "calmar": "0.42342745370398444",
+      "annualized_volatility": "0.12861825575652394",
+      "worst_calendar_year": "-0.08891159250997338",
+      "worst_rolling_three_year_cagr": "-0.011542585447919085",
+      "ending_nav": "3.2094773416885336"
+    },
+    "C46_minus_C45": {
+      "cagr_percentage_points": "0.23616867372546757",
+      "maximum_drawdown_improvement_percentage_points": "0.06876153907761084",
+      "calmar_improvement": "0.010155012043000344",
+      "annualized_volatility_improvement_percentage_points": "-0.06711156748919478",
+      "worst_calendar_year_improvement_percentage_points": "0.10978112492882053",
+      "worst_rolling_three_year_cagr_improvement_percentage_points": "0.10206575150387698",
+      "ending_nav_relative_advantage": "0.023824996915884578"
+    },
+    "C44_same_window_base25bp_lag1": {
+      "net_cagr": "0.10470503457351654",
+      "maximum_drawdown": "0.23904291755914953",
+      "calmar": "0.43801772352283980"
+    },
+    "C46_minus_C44": {
+      "cagr_percentage_points": "0.85617698657352030",
+      "maximum_drawdown_improvement_percentage_points": "-2.2191826433814676",
+      "calmar_improvement": "-0.004435257775855017",
+      "interpretation": "C46 has higher formation return, but C44 retains lower drawdown and slightly higher formation Calmar."
+    },
+    "C11_same_window_base25bp_lag1": {
+      "net_cagr": "0.08556150638034388",
+      "maximum_drawdown": "0.27999145137567816",
+      "calmar": "0.30558613829085030",
+      "annualized_volatility": "0.13017267624775372",
+      "worst_calendar_year": "-0.14868390731065450",
+      "worst_rolling_three_year_cagr": "-0.059964476324338545"
+    },
+    "C46_minus_C11": {
+      "cagr_percentage_points": "2.7705298058907870",
+      "maximum_drawdown_improvement_percentage_points": "1.8756707382713955",
+      "calmar_improvement": "0.12799632745613448",
+      "annualized_volatility_improvement_percentage_points": "0.08833048163378321",
+      "worst_calendar_year_improvement_percentage_points": "6.0870126049969330",
+      "worst_rolling_three_year_cagr_improvement_percentage_points": "4.9442548391458230"
+    }
+  },
+  "negative_evidence": {
+    "C45_Aggressive_2_growth_satellite": {
+      "change": "Replace five percentage points of quality growth with actual 159915 ChiNext exposure while keeping total equity at sixty percent.",
+      "net_cagr": "0.11114046021323731",
+      "maximum_drawdown": "0.26371582596622320",
+      "calmar": "0.42144023706590970",
+      "cagr_advantage_vs_C45_percentage_points": "0.023534251124024408",
+      "maximum_drawdown_deterioration_percentage_points": "0.17934665824829166",
+      "calmar_change": "-0.001987216638074718",
+      "worst_rolling_three_year_deterioration_percentage_points": "0.98258512961620910",
+      "decision": "PERMANENTLY_REJECTED_NO_RESCUE_ON_THIS_WINDOW"
+    },
+    "pre_performance_four_percent_equal_carry_structure": {
+      "extreme_deterministic_loss": "0.45116666666666666",
+      "decision": "REJECTED_BEFORE_ANY_PERFORMANCE_RUN",
+      "replacement_frozen_before_performance": "Three percent carry, one percent short policy-bank debt and one percent cash."
+    }
+  },
+  "return_path_stress": {
+    "all_carry_minus_2pct_annual": {
+      "net_cagr": "0.11263744685106714",
+      "maximum_drawdown": "0.26159404522159635",
+      "calmar": "0.43058108129201467"
+    },
+    "carry_alpha_halved_vs_short_policy_bank_debt": {
+      "net_cagr": "0.11232439862833332",
+      "maximum_drawdown": "0.26059623385176856",
+      "calmar": "0.43102848022057483"
+    },
+    "short_policy_bank_debt_minus_1pct_annual": {
+      "net_cagr": "0.11316588653361292",
+      "maximum_drawdown": "0.26129711878516340",
+      "calmar": "0.43309274537641230"
+    },
+    "permanent_route_shocks_25_20_20pct": {
+      "net_cagr": "0.11267308819329291",
+      "maximum_drawdown": "0.26123474399296420",
+      "calmar": "0.43130973495748914"
+    },
+    "all_equity_minus_2pct_annual": {
+      "net_cagr": "0.09969162654053254",
+      "maximum_drawdown": "0.26551164615218925",
+      "calmar": "0.37546988233951160"
+    },
+    "joint_factor_gold_and_carry_discount": {
+      "net_cagr": "0.09906112875490147",
+      "maximum_drawdown": "0.26647626749717300",
+      "calmar": "0.37174465735847334"
+    },
+    "all_frozen_return_path_groups_passed": true
+  },
+  "date_robustness": {
+    "fixed_subperiod_CAGR": {
+      "2015_2018": "0.07481585536925395",
+      "2019_2022": "0.11833401710296587",
+      "2023_end": "0.15419352806446618"
+    },
+    "rolling_start_years_tested": [2016, 2017, 2018, 2019, 2020, 2021],
+    "all_fixed_subperiod_CAGRs_positive": true,
+    "incremental_CAGR_positive_in_at_least_two_subperiods": true,
+    "all_rolling_start_CAGRs_positive": true,
+    "all_rolling_start_maximum_drawdowns_at_or_below_35pct": true
+  },
+  "static_and_current_structure": {
+    "nominal_equity": "0.60000000000000000",
+    "current_carry_equity_lookthrough": "0.004355",
+    "effective_equity_including_current_carry_stocks": "0.604355",
+    "effective_equity_cap": "0.61",
+    "gold": "0.20",
+    "long_duration": "0.15",
+    "carry": "0.03",
+    "short_policy_bank_debt": "0.01",
+    "cash": "0.01",
+    "normal_deterministic_loss": "0.3254000000000000000",
+    "normal_loss_limit": "0.35",
+    "extreme_deterministic_loss": "0.4495000000000000000",
+    "extreme_loss_limit": "0.45",
+    "extreme_limit_headroom_percentage_points": "0.05",
+    "buffered_industry_upper_bound": "0.137805",
+    "industry_limit": "0.15",
+    "buffered_single_security_upper_bound": "0.03838107142853794",
+    "single_security_limit": "0.04",
+    "single_security_headroom_percentage_points": "0.161892857146206",
+    "maximum_single_active_manager_weight": "0.01",
+    "all_current_structure_checks_passed": true,
+    "warning": "Convertible delta, credit spread, repo leverage and derivative gross exposure are not captured by stock look-through. Deterministic stress is a scenario, not a guaranteed ceiling."
+  },
+  "current_product_health": {
+    "as_of": "2026-08-14",
+    "strategic_product_mapping_passed": true,
+    "order_ready": false,
+    "order_blocker": "Exact same-share status, intended-distributor daily limit, fee discount, confirmation, settlement, suitability and actual-lot redemption cost require a same-session refresh.",
+    "new_routes": {
+      "000047": {
+        "name": "华夏双债债券A",
+        "manager": "柳万军",
+        "manager_start": "2015-07-16",
+        "conservative_AUM_cny": "4437990000",
+        "management_plus_custody_fee": "0.0080",
+        "equity_pct_of_fund_NAV_2026_06_30": "11.64",
+        "health_passed": true
+      },
+      "110008": {
+        "name": "易方达稳健收益债券B",
+        "manager": "胡剑",
+        "manager_start": "2012-02-29",
+        "conservative_AUM_cny": "28168990000",
+        "management_plus_custody_fee": "0.0080",
+        "equity_pct_of_fund_NAV_2026_06_30": "19.79",
+        "health_passed": true
+      },
+      "110017": {
+        "name": "易方达增强回报债券A",
+        "manager": "王晓晨",
+        "manager_start": "2011-08-15",
+        "conservative_AUM_cny": "43634470000",
+        "management_plus_custody_fee": "0.0085",
+        "equity_pct_of_fund_NAV_2026_06_30": "12.12",
+        "health_passed": true
+      },
+      "007169": {
+        "name": "易方达中债1-3年国开行债券指数A",
+        "manager": "杨真",
+        "manager_start": "2020-11-28",
+        "AUM_cny_2026_06_30": "4315398349.84",
+        "management_plus_custody_fee": "0.0020",
+        "health_passed": true
+      }
+    }
+  },
+  "independent_verification": {
+    "numeric_path_reconciled_to_tolerance": "1e-12",
+    "all_cost_date_robustness_and_stress_paths_reconciled": true,
+    "v1_result_preserved_as_failed": true,
+    "v1_false_negative_causes": [
+      "Independent floating-point summation order changed an ending-NAV byte hash by about 7e-16 even though numeric paths reconciled.",
+      "Converting a binary float to Decimal produced 0.449500000000000042 instead of the contract's exact decimal 0.4495."
+    ],
+    "correction_frozen_before_v2": true,
+    "strategy_weight_gate_or_primary_result_changed": false,
+    "corrected_verdict": "contaminated-formation-breakthrough-independently-confirmed"
+  },
+  "migration_boundary": {
+    "stop_new_C11_contributions": true,
+    "existing_first_C11_batch": "HOLD_PENDING_ACTUAL_LOT_HOLDING_PERIOD_REDEMPTION_FEE_AND_CHANNEL_REVIEW",
+    "second_C11_batch": "WAIT",
+    "new_cash": "DO_NOT_FUND_C46_UNTIL_FORWARD_AND_SAME_SESSION_PRODUCT_GATES_ARE_DEFINED; LATER_FILL_UNDERWEIGHTS_FIRST",
+    "legacy_positions": "ANY_LATER_MIGRATION_MUST_USE_ACTUAL_TOTAL_WEALTH_AND_ACTUAL_LOTS_IN_BOUNDED_MONTH_END_BATCHES",
+    "separate_external_household_emergency_reserve_required": true
+  },
+  "research_decision": {
+    "major_breakthrough": true,
+    "C46_research_successor_to_C45_for_complexity_tolerant_user": true,
+    "universal_C45_replacement": false,
+    "C44_remains_default_for_most_people": true,
+    "C45_remains_simple_higher_offense_default": true,
+    "C46_is_optimized_higher_offense_option_with_external_emergency_cash": true,
+    "why_not_universal": "The formation gain over C45 is only 0.236 percentage points per year, while C46 adds four fund lines, cuts internal cash from five to one percent and adds manager, credit and convertible risks.",
+    "stop_repeated_old_window_search": true,
+    "next_evidence": "Freeze the strategy identity and collect append-only forward shadow evidence before any simulation-promotion or migration decision."
+  },
+  "source_bindings": {
+    "internal_L0_role_stress_correction_sha256": "03183f4423aff8ddd3a25c808d13b42a9150ff145f0676f09dad1f4947ef9d80",
+    "internal_frozen_contract_sha256": "4e84c20fc88f38f0c0a2ced4c81ee599550f939436cd2b13848212bb5c4b3281",
+    "internal_research_code_sha256": "3562fb4a252d78cc96a4b71f38fef3d203e4021e94c4372d61317669be6ec07c",
+    "internal_numeric_result_sha256": "5d51519acf78cda2ba5a729729bd412593417bb6fc5f79b857e5f4fec919ecd8",
+    "candidate_base_NAV_sha256": "3b2f52894c1d08338812f1d6fb64c29e8239a9b0b845c316bf3168e3daf865c7",
+    "matching_C45_base_NAV_sha256": "e0d776ec433aa6d03ba925d2ab505edaae39f04929c8b615e04327236cc08496",
+    "independent_verifier_v1_code_sha256": "51da9341b31b2338ba749701aae72dee7ebd179c3239393c16cd71bf6194f02d",
+    "independent_verifier_v1_failed_result_sha256": "b5c631e9071aa5202f16d2dcfb6f741d7e57b951d26f4a94c34465f8b4f728e1",
+    "independent_correction_contract_sha256": "f2f5b1ec7e14cc2e05e77ebc6ad52e6c8bb30b2d2a4e3466f9fe8941d5dce6c8",
+    "independent_verifier_v2_code_sha256": "94ed08635dc21fd5606bbd37e59ddf68b7ed743ac18e9b38b87ce2813cc08ebc",
+    "independent_corrected_result_sha256": "5a30696596a7085d43e69876be4a0b5e2cdfbb27f2fdfcb447b53e603b7d4cd8",
+    "current_product_structure_decision_sha256": "444b74f46624fe073e2db97b5afd952c100b57a216ea3231f65f0283dbc850dd",
+    "C45_Aggressive_2_rejected_result_sha256": "b2f05879f7cbd7df13f4a100dc9fa12368030188e2d679fac473248901658c78",
+    "independent_verification_passed_all_substantive_groups": true
+  }
+}
