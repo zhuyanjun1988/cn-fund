@@ -192,6 +192,14 @@ def verify() -> dict[str, Any]:
         "independent_paths_reconciled": summary["independent_verification"][
             "all_cost_date_robustness_and_stress_paths_reconciled"
         ],
+        "cash_benchmark_limitation_is_explicit": summary[
+            "cash_benchmark_limitation"
+        ]["parent_C45_cash_return_assumption"]
+        == "0.0"
+        and summary["cash_benchmark_limitation"]["conditional_breakthrough_only"]
+        and not summary["cash_benchmark_limitation"][
+            "yield_bearing_cash_counterfactual_formally_replayed"
+        ],
         "effective_equity_within_cap": Decimal(
             structure["effective_equity_including_current_carry_stocks"]
         )

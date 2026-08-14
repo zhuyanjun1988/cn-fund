@@ -96,7 +96,7 @@
       "relation": "derivative",
       "effective_time": "2026-08-15",
       "reason": "C46 keeps C45's sixty-percent equity, twenty-percent gold and fifteen-percent long-duration budgets and changes only the five-percent cash sleeve to three percent carry, one percent short policy-bank debt and one percent cash.",
-      "evidence_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9"
+      "evidence_hash": "d7df0cd6b90e26a25d43578b33c6882a4e1599c6ff6c54803d3453b32af1f7e5"
     },
     {
       "source_id": "C45-Aggressive-1",
@@ -104,7 +104,7 @@
       "relation": "optimized-research-successor",
       "effective_time": "2026-08-15",
       "reason": "For a complexity-tolerant higher-offense user with a separate household emergency reserve, C46 passed all frozen incremental, risk, independent-accounting, structure and product-health gates; C45 remains the simpler higher-offense default and no order is authorized.",
-      "evidence_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9"
+      "evidence_hash": "d7df0cd6b90e26a25d43578b33c6882a4e1599c6ff6c54803d3453b32af1f7e5"
     }
   ],
   "non_supersession": [

@@ -11,6 +11,11 @@
   "economic_hypothesis": "Keep C45's exact sixty-percent equity, twenty-percent gold and fifteen-percent long-duration budgets, but replace four percentage points of modeled-zero cash with three independently managed one-percent fixed-income-plus routes and one percent short policy-bank debt while retaining one percent operational cash.",
   "single_conceptual_change_from_parent": "Only the five-percent C45 cash sleeve changes: three percent becomes a three-manager carry ladder, one percent becomes short policy-bank debt and one percent remains cash.",
   "why_not_more_equity": "C45 already holds sixty percent nominal equity and the rejected C45-Aggressive-2 five-percent ChiNext experiment added only 0.0235 percentage points of CAGR while worsening drawdown, Calmar and rolling-three-year results.",
+  "cash_benchmark_limitation": {
+    "parent_C45_cash_return_assumption": "0.0",
+    "incremental_breakthrough_is_conditional_on_frozen_parent_accounting": true,
+    "warning": "A yield-bearing money-market or deposit benchmark for C45 cash would reduce C46's measured 0.2362 percentage-point CAGR advantage and could put it below the 0.20-point materiality gate. That counterfactual was not opened after the one-shot result, so C46 must not be described as proven alpha over investable cash."
+  },
   "target_weights": {
     "024622_free_cash_flow_factor": "0.23571428571428570",
     "021550_dividend_low_volatility": "0.19285714285714287",

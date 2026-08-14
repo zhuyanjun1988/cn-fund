@@ -219,7 +219,7 @@
       "final_decision": "CONTAMINATED_FORMATION_MAJOR_BREAKTHROUGH_OPTIMIZED_HIGHER_OFFENSE_FORWARD_REQUIRED_NOT_UNIVERSAL_C45_REPLACEMENT",
       "rejection_reason": null,
       "artifact_root": "evidence/c46",
-      "seal_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9",
+      "seal_hash": "d7df0cd6b90e26a25d43578b33c6882a4e1599c6ff6c54803d3453b32af1f7e5",
       "contaminated": true,
       "invalid_run": false
     }

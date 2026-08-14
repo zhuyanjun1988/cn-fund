@@ -6,7 +6,7 @@
     "C21-C26": "4aff425258d83574e8ac1448b158ffb56a552a11baa2b6e291e0ce97adea7a6f",
     "C44-Standard-1": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd",
     "C45-Aggressive-1": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e",
-    "C46-Aggressive-1": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9"
+    "C46-Aggressive-1": "d7df0cd6b90e26a25d43578b33c6882a4e1599c6ff6c54803d3453b32af1f7e5"
   },
   "catalog_invariants": {
     "historical_rows_append_only": true,
@@ -415,7 +415,7 @@
       "formation": {"start": "2015-01-05", "end": "2026-07-06", "status": "sealed-contaminated-current-survivor-and-manager-selection"},
       "validation": {"status": "not-opened"},
       "terminal": {"status": "research-optimized-higher-offense-successor-forward-required"},
-      "data_manifest_hash": "377e981d5994d880d2f81650e6a4ba85a676220aae7bdfc635b12415cd7c06f9",
+      "data_manifest_hash": "d7df0cd6b90e26a25d43578b33c6882a4e1599c6ff6c54803d3453b32af1f7e5",
       "code_hash": "3562fb4a252d78cc96a4b71f38fef3d203e4021e94c4372d61317669be6ec07c",
       "cost_convention": {"base_l1": "0.0025", "high_l1": "0.0100", "extreme_l1": "0.0250"},
       "base_metrics": {"cagr": "0.11326680443925174", "maximum_drawdown": "0.26123474399296420", "calmar": "0.43358246574698480"},

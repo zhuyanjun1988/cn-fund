@@ -30,6 +30,13 @@
     "common_sessions": 2794,
     "warning": "The same 2015-2026 history was repeatedly used during asset, product and strategy research. Current surviving managers were selected with full history visible, and factor histories include pre-publication or pre-fund counterfactual paths. This is contaminated formation evidence, not a holdout."
   },
+  "cash_benchmark_limitation": {
+    "parent_C45_cash_return_assumption": "0.0",
+    "reported_C46_minus_C45_CAGR_advantage_percentage_points": "0.23616867372546757",
+    "conditional_breakthrough_only": true,
+    "yield_bearing_cash_counterfactual_formally_replayed": false,
+    "warning": "The measured advantage partly compensates for replacing a zero-return cash assumption. If C45 cash earned money-market or deposit yield, C46's incremental CAGR would be smaller and could fall below the frozen 0.20-point materiality gate. No post-result counterfactual is opened on the reused window."
+  },
   "target_weights": {
     "024622_free_cash_flow_factor": "0.23571428571428570",
     "021550_dividend_low_volatility": "0.19285714285714287",
@@ -318,7 +325,7 @@
     "C44_remains_default_for_most_people": true,
     "C45_remains_simple_higher_offense_default": true,
     "C46_is_optimized_higher_offense_option_with_external_emergency_cash": true,
-    "why_not_universal": "The formation gain over C45 is only 0.236 percentage points per year, while C46 adds four fund lines, cuts internal cash from five to one percent and adds manager, credit and convertible risks.",
+    "why_not_universal": "The formation gain over C45 is only 0.236 percentage points per year under a zero-return parent-cash assumption, while C46 adds four fund lines, cuts internal cash from five to one percent and adds manager, credit and convertible risks.",
     "stop_repeated_old_window_search": true,
     "next_evidence": "Freeze the strategy identity and collect append-only forward shadow evidence before any simulation-promotion or migration decision."
   },

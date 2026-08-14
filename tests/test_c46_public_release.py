@@ -130,6 +130,17 @@ class C46PublicReleaseTests(unittest.TestCase):
         )
         self.assertEqual(len(verification["v1_false_negative_causes"]), 2)
 
+    def test_breakthrough_discloses_zero_return_cash_benchmark(self):
+        limitation = self.summary["cash_benchmark_limitation"]
+        self.assertEqual(limitation["parent_C45_cash_return_assumption"], "0.0")
+        self.assertTrue(limitation["conditional_breakthrough_only"])
+        self.assertFalse(limitation["yield_bearing_cash_counterfactual_formally_replayed"])
+        self.assertTrue(
+            self.contract["cash_benchmark_limitation"][
+                "incremental_breakthrough_is_conditional_on_frozen_parent_accounting"
+            ]
+        )
+
     def test_catalog_registers_positive_and_negative_rounds(self):
         rows = {row["canonical_name"]: row for row in self.registry["strategies"]}
         self.assertEqual(rows["C46-Aggressive-1"]["parent_id"], "C45-Aggressive-1")
