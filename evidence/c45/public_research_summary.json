@@ -1,0 +1,239 @@
+{
+  "schema_version": "c45-public-research-summary-v1",
+  "published_on": "2026-08-14",
+  "candidate_id": "C45-Aggressive-1",
+  "canonical_name": "C45-Aggressive-1",
+  "descriptive_name_cn": "C45六成权益因子久期桥接进取策略",
+  "technical_id": "C45-C21EQ60-FCF23.57-DIV19.29-MQ17.14-G20-DUR15-CASH5-511010-TO-003376-LAG1",
+  "parent_id": "C21-Standard-1",
+  "authority_boundary": {
+    "evidence_class": "contaminated-formation-factor-backfill-repeated-window-never-clean-OOS",
+    "research_successor_to_C11_for_higher_offense_user": true,
+    "default_for_most_people": "C44-Standard-1",
+    "current_account_action": "HOLD_EXISTING_FIRST_C11_BATCH_AND_WAIT_ON_SECOND_BATCH_PENDING_LOT_FEE_AND_CHANNEL_CHECKS",
+    "immediate_full_liquidation_authorized": false,
+    "order_ready": false,
+    "clean_oos_claimed": false,
+    "simulation_approved": false,
+    "live_trading_approved": false,
+    "account_accessed": false,
+    "credentials_accessed": false,
+    "orders_submitted": 0
+  },
+  "window": {
+    "start": "2015-01-05",
+    "end": "2026-07-06",
+    "common_sessions": 2794,
+    "warning": "The same 2015-2026 history was repeatedly used during asset, product and strategy research. Equity factor histories also include pre-publication or pre-fund counterfactual paths, so this is formation evidence rather than a clean holdout."
+  },
+  "target_weights": {
+    "024622_free_cash_flow_factor": "0.23571428571428570",
+    "021550_dividend_low_volatility": "0.19285714285714287",
+    "007593_CSI500_quality_growth": "0.17142857142857143",
+    "000216_gold": "0.20000000000000000",
+    "003376_long_policy_bank_bond_current_route": "0.15000000000000000",
+    "cash_cny": "0.05000000000000000"
+  },
+  "model_amounts_per_CNY_1000000": {
+    "024622": "235714.29",
+    "021550": "192857.14",
+    "007593": "171428.57",
+    "000216": "200000.00",
+    "003376": "150000.00",
+    "cash_cny": "50000.00"
+  },
+  "execution_rule": {
+    "decision_frequency": "monthly",
+    "drift_trigger_absolute_percentage_points": "5.0",
+    "primary_execution_lag_common_sessions": 1,
+    "below_trigger": "HOLD",
+    "at_or_above_trigger": "REBALANCE_ALL_SLEEVES_TO_TARGET",
+    "historical_rebalance_count": 8,
+    "historical_route_switch_count": 1,
+    "annualized_one_way_l1_turnover": "0.15564857139728813",
+    "new_cash_rule": "FILL_UNDERWEIGHTS_FIRST",
+    "unknown_state_rule": "FAIL_CLOSED"
+  },
+  "historical_availability_bridge": {
+    "pre_availability_route": "511010 actual five-year Treasury ETF NAV total return",
+    "first_003376_NAV_observation": "2016-09-26",
+    "route_switch_execution_close": "2016-09-27",
+    "first_003376_return_session": "2016-09-28",
+    "switch_cost_charged": true,
+    "current_target_route": "003376",
+    "warning": "511010 is not a current target and must not be bought merely to reenact the historical bridge."
+  },
+  "formation_metrics": {
+    "base_cost25bp_lag1": {
+      "net_cagr": "0.11090511770199707",
+      "maximum_drawdown": "0.26192235938374030",
+      "calmar": "0.42342745370398444",
+      "annualized_volatility": "0.12861825575652394",
+      "worst_calendar_year": "-0.08891159250997338",
+      "worst_rolling_three_year_cagr": "-0.011542585447919085",
+      "ending_nav": "3.2094773416885336",
+      "cagr_2015_2018": "0.07279543551361378",
+      "cagr_2019_2022": "0.11390718858094528",
+      "cagr_2023_end": "0.15287712119646480"
+    },
+    "high_cost100bp_lag1": {
+      "net_cagr": "0.10960443978868817",
+      "maximum_drawdown": "0.26192235938374000",
+      "calmar": "0.41846156260415990"
+    },
+    "extreme_cost250bp_lag1": {
+      "net_cagr": "0.10699084778081569",
+      "maximum_drawdown": "0.26192235938373987",
+      "calmar": "0.40848306357864034"
+    },
+    "base_cost25bp_lag2": {
+      "net_cagr": "0.11084998740302754",
+      "maximum_drawdown": "0.25907082788918920",
+      "calmar": "0.42787521970802794"
+    }
+  },
+  "comparisons": {
+    "C11_same_window_base25bp_lag1": {
+      "net_cagr": "0.08556150638034388",
+      "maximum_drawdown": "0.27999145137567816",
+      "calmar": "0.30558613829085030",
+      "annualized_volatility": "0.13017267624775372",
+      "worst_calendar_year": "-0.14868390731065450",
+      "worst_rolling_three_year_cagr": "-0.059964476324338545"
+    },
+    "C45_minus_C11": {
+      "cagr_percentage_points": "2.5343611321653186",
+      "maximum_drawdown_improvement_percentage_points": "1.8069091991937860",
+      "calmar_improvement": "0.11784131541313415",
+      "annualized_volatility_improvement_percentage_points": "0.15544204912297710",
+      "worst_calendar_year_improvement_percentage_points": "5.9772314800671130",
+      "worst_rolling_three_year_cagr_improvement_percentage_points": "4.8421890876419460"
+    },
+    "C21_matching_causal_base25bp_lag1": {
+      "net_cagr": "0.10744573371600885",
+      "maximum_drawdown": "0.26024658851773297",
+      "calmar": "0.41286125719449190",
+      "ending_nav": "3.1003906554188410"
+    },
+    "C45_minus_matching_C21": {
+      "cagr_percentage_points": "0.34593839859882180",
+      "maximum_drawdown_deterioration_percentage_points": "0.16757708660073423",
+      "calmar": "0.010566196509492531",
+      "ending_nav_advantage_fraction": "0.03518481971909959"
+    },
+    "C44_same_window_base25bp_lag1": {
+      "net_cagr": "0.10470503457351654",
+      "maximum_drawdown": "0.23904291755914953",
+      "calmar": "0.43801772352283980"
+    },
+    "C45_minus_C44": {
+      "cagr_percentage_points": "0.62000831284805270",
+      "maximum_drawdown_deterioration_percentage_points": "2.2879441824590785",
+      "calmar": "-0.014590269818855361",
+      "interpretation": "C45 has the higher formation-period return and sixty-percent nominal equity; C44 retains lower drawdown and slightly better formation-period Calmar."
+    }
+  },
+  "return_source_stress": {
+    "duration_bridge_minus_1pct_annual": {
+      "net_cagr": "0.10885209298172050",
+      "maximum_drawdown": "0.26285049453181450",
+      "calmar": "0.41412169749045463"
+    },
+    "one_day_minus_10pct_duration_shock": {
+      "net_cagr": "0.10935994069430932",
+      "maximum_drawdown": "0.26192235938374030",
+      "calmar": "0.41752808332826200"
+    },
+    "all_equity_minus_2pct_annual": {
+      "net_cagr": "0.09727405834653724",
+      "maximum_drawdown": "0.26620027672420965",
+      "calmar": "0.36541681903402257"
+    },
+    "joint_backfill_and_gold_discount": {
+      "net_cagr": "0.09991765857053525",
+      "maximum_drawdown": "0.26680542204191860",
+      "calmar": "0.37449635695498307"
+    },
+    "keep_511010_for_full_window": {
+      "net_cagr": "0.10741566201793540",
+      "maximum_drawdown": "0.26192235938374030",
+      "calmar": "0.41010497259824080"
+    },
+    "all_frozen_return_path_groups_passed": true
+  },
+  "date_robustness": {
+    "fixed_subperiod_CAGR": {
+      "2015_2018": "0.07279543551361378",
+      "2019_2022": "0.11583127651218272",
+      "2023_end": "0.15163975412028585"
+    },
+    "rolling_start_years_tested": [2016, 2017, 2018, 2019, 2020, 2021],
+    "all_fixed_subperiod_CAGRs_positive": true,
+    "all_rolling_start_CAGRs_positive": true,
+    "all_rolling_start_maximum_drawdowns_at_or_below_35pct": true
+  },
+  "static_and_current_structure": {
+    "nominal_equity": "0.60000000000000000",
+    "gold": "0.20000000000000000",
+    "duration": "0.15000000000000000",
+    "cash": "0.05000000000000000",
+    "normal_deterministic_loss": "0.32200000000000006",
+    "normal_loss_limit": "0.35",
+    "extreme_deterministic_loss": "0.44250000000000006",
+    "extreme_loss_limit": "0.45",
+    "extreme_limit_headroom_percentage_points": "0.75",
+    "maximum_industry": "industrials",
+    "maximum_industry_portfolio_weight": "0.12345",
+    "buffered_industry_weight": "0.13345",
+    "industry_limit": "0.15",
+    "maximum_security": "格力电器",
+    "maximum_security_portfolio_weight": "0.02902607142853794",
+    "buffered_security_weight": "0.03402607142853794",
+    "security_limit": "0.04",
+    "all_current_structure_checks_passed": true,
+    "warning": "Deterministic role shocks are scenarios, not VaR, probabilities or guaranteed loss ceilings."
+  },
+  "current_product_health": {
+    "as_of": "2026-08-14",
+    "strategic_product_mapping_passed": true,
+    "order_ready": false,
+    "order_blocker": "Same-share intended-channel purchase limit, fee discount, confirmation, settlement and the investor's actual lot-level redemption fees were not captured for an order session.",
+    "notable_observations": {
+      "024622": "The fund and target ETF are young; most pre-2025 evidence is index backfill, and a manager-snapshot discrepancy remains on watch.",
+      "021550": "The fund was established in 2024; most long history is an index counterfactual rather than actual fund NAV.",
+      "007593": "Share-A AUM about CNY 243 million and family AUM about CNY 330 million at 2026-06-30; annualized tracking error since 2022-11-09 about 1.17%; strategic health passed but order-session checks remain open.",
+      "000216": "Mature gold ETF feeder route; gold is a volatile macro asset and is not cash or fixed income.",
+      "003376": "Inception 2016-09-26; AUM about CNY 30.758 billion at 2026-06-30; management plus custody fee 0.20%; disclosed bond weight 118.93% of NAV; long-duration and gross-exposure risks remain."
+    }
+  },
+  "migration_boundary": {
+    "stop_new_C11_contributions": true,
+    "existing_first_C11_batch": "HOLD_PENDING_LOT_HOLDING_PERIOD_REDEMPTION_FEE_AND_CHANNEL_REVIEW",
+    "second_C11_batch": "WAIT",
+    "new_cash": "FILL_C45_UNDERWEIGHTS_ONLY_AFTER_SAME_SESSION_PRODUCT_GATES",
+    "legacy_positions": "THREE_MONTH_END_TRANCHES_IS_A_PRAGMATIC_MIGRATION_FRAME_NOT_A_RETURN_SIGNAL",
+    "amount_rule": "Recalculate from actual total wealth and positions; model amounts are not account orders."
+  },
+  "planning_expectations": {
+    "research_target_long_term_nominal_CAGR": "0.10",
+    "prudent_financial_planning_nominal_CAGR_range": ["0.07", "0.09"],
+    "normal_bad_period_drawdown_preparation_range": ["0.25", "0.35"],
+    "extreme_joint_loss_preparation_range": ["0.40", "0.45"]
+  },
+  "source_bindings": {
+    "internal_frozen_contract_sha256": "f9cb40a4c74f3c693de91a29088e21d2fa22e3bdcbd44d1b14f754d21e8a43ac",
+    "internal_research_code_sha256": "f5bf003c684907eb1bb4fdff55ba257a9a1bd1542b20b3b2b50985afd6051a60",
+    "internal_numeric_result_sha256": "9480f05b1ff7d8a39282ecb7ed33c027f0082e75d746d61948fa04f0b8e84dd8",
+    "internal_independent_verifier_sha256": "91628a2c9b60d48cd7b52d197df2e2eb1611187955291adf8cff1f6c78fdbb48",
+    "internal_independent_verification_result_sha256": "ccff5a23e8cd388f2bef343d8b1be3f8f15454d094268f72aba38a49ba01bc54",
+    "internal_current_product_structure_audit_sha256": "0840995af37c9c6c7228ebe59b60c6583152d0846e5f89973c199a4d5bce5bcc",
+    "internal_recommendation_report_sha256": "645b0c6d7fa48f3e35cc22ea5a8771354474ab6d76d07deeda50305a54883ae4",
+    "511010_raw_NAV_sha256": "5491c4deb046ccd9b9a775fa24e64674782bfae97f3b9c50283eafa6de919163",
+    "511010_raw_manifest_sha256": "5e6197504290e64f05135d162348a04a38f0c2394518c795a4426c04d61adf9b",
+    "003376_raw_NAV_sha256": "a1a631addeaa3d31162cb00c991efdde57a4ad3756962b4a180f2ae1b6f89202",
+    "003376_raw_manifest_sha256": "8dde2f183c78a5ad72d542043ddc69bdbf604eff92d26f0f372fefa1f9f7da35",
+    "candidate_base_NAV_sha256": "e0d776ec433aa6d03ba925d2ab505edaae39f04929c8b615e04327236cc08496",
+    "matching_C21_base_NAV_sha256": "571454a8da254f359224ce74b2952df06f2d5887962eb1168291fa009551bf25",
+    "independent_verification_passed_all_groups": true
+  }
+}

@@ -171,6 +171,23 @@
       "seal_hash": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd",
       "contaminated": true,
       "invalid_run": false
+    },
+    {
+      "round_id": "ROUND-C45-A1",
+      "preregistration_hash": "f9cb40a4c74f3c693de91a29088e21d2fa22e3bdcbd44d1b14f754d21e8a43ac",
+      "hypothesis": "Keeping C21's exact sixty-percent equity factor mix, an availability-aware sovereign-to-policy-bank duration bridge can add term premium and macro convexity without breaking the user's drawdown limits.",
+      "component_changed": "Only the fifteen-percent bond route: actual 511010 until 003376 becomes observable, then a costed next-session switch to 003376",
+      "candidate_family": "C45",
+      "candidate_count": 1,
+      "formation_result": "Versus same-window C11, CAGR improved 2.5344 percentage points and MDD improved 1.8069 points; versus matching causal C21, CAGR improved 0.3459 points with only 0.1676 points of MDD deterioration. All frozen numeric, route, cost, delay, return-source, date, structure and product gates passed.",
+      "validation_opened": false,
+      "selected_id": "C45-Aggressive-1",
+      "final_decision": "RECOMMEND_HIGHER_OFFENSE_RESEARCH_SUCCESSOR_TO_C11_PHASED_TRANSITION_REQUIRED_C44_REMAINS_MOST_PEOPLE_DEFAULT",
+      "rejection_reason": null,
+      "artifact_root": "evidence/c45",
+      "seal_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e",
+      "contaminated": true,
+      "invalid_run": false
     }
   ]
 }

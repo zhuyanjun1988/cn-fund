@@ -4,7 +4,8 @@
   "public_evidence_manifest_sha256": "4aff425258d83574e8ac1448b158ffb56a552a11baa2b6e291e0ce97adea7a6f",
   "public_evidence_manifests": {
     "C21-C26": "4aff425258d83574e8ac1448b158ffb56a552a11baa2b6e291e0ce97adea7a6f",
-    "C44-Standard-1": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd"
+    "C44-Standard-1": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd",
+    "C45-Aggressive-1": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e"
   },
   "catalog_invariants": {
     "historical_rows_append_only": true,
@@ -332,6 +333,38 @@
       "forward_required": 12,
       "decision_path": "docs/15_C44成熟三因子多经理固收加杠铃策略.md",
       "decision_hash": "d50cf61c7789e74db66c65a0eb3aadc1f0f3eb13e3fea0e74d9bf9e3839df721",
+      "as_of": "2026-08-14"
+    },
+    {
+      "canonical_name": "C45-Aggressive-1",
+      "technical_id": "C45-C21EQ60-FCF23.57-DIV19.29-MQ17.14-G20-DUR15-CASH5-511010-TO-003376-LAG1",
+      "freeze_hash": "f9cb40a4c74f3c693de91a29088e21d2fa22e3bdcbd44d1b14f754d21e8a43ac",
+      "family": "C45",
+      "parent_id": "C21-Standard-1",
+      "signal": "Static sixty-percent C21 equity factor allocation plus an availability-aware duration bridge; no factor or interest-rate timing",
+      "action": "At month-end, hold unless any sleeve drifts by at least five percentage points; then restore all targets on the next common session",
+      "risk": "60 percent nominal equity, 20 percent gold, 15 percent seven-to-ten-year policy-bank bonds and 5 percent cash; 44.25 percent deterministic extreme role shock",
+      "execution": "Decision after knowable month-end NAVs; next-common-session execution; historical 511010-to-003376 route switch explicitly costed; unknown product or channel state fails closed",
+      "signal_assets": ["month-end actual NAV weights"],
+      "traded_assets": ["024622", "021550", "007593", "000216", "003376", "CASH"],
+      "formation": {"start": "2015-01-05", "end": "2026-07-06", "status": "sealed-contaminated-factor-backfill-repeated-window"},
+      "validation": {"status": "not-opened"},
+      "terminal": {"status": "research-higher-offense-successor-phased-transition-only"},
+      "data_manifest_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e",
+      "code_hash": "f5bf003c684907eb1bb4fdff55ba257a9a1bd1542b20b3b2b50985afd6051a60",
+      "cost_convention": {"base_l1": "0.0025", "high_l1": "0.0100", "extreme_l1": "0.0250"},
+      "base_metrics": {"cagr": "0.11090511770199707", "maximum_drawdown": "0.2619223593837403", "calmar": "0.42342745370398444"},
+      "stress_metrics": {"duration_minus_1pct_annual_cagr": "0.1088520929817205", "all_equity_minus_2pct_annual_cagr": "0.09727405834653724", "joint_backfill_and_gold_discount_cagr": "0.09991765857053525", "extreme_static_loss": "0.4425"},
+      "candidate_count": 1,
+      "effective_paths": 1,
+      "selection_metric": "Frozen absolute, matching-C21, C44 step-up, cost, delay, return-source, date, structure and current-product gates",
+      "pbo": "not-computed; repeated-use contamination, factor backfill and current-survivor product selection disclosed",
+      "simulation_status": "NOT_APPROVED",
+      "live_status": "NOT_APPROVED",
+      "forward_complete": 0,
+      "forward_required": 12,
+      "decision_path": "docs/16_C45六成权益因子久期桥接进取策略.md",
+      "decision_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e",
       "as_of": "2026-08-14"
     }
   ]

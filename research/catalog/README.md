@@ -21,9 +21,11 @@
 
 目录不会把 C23/C26 的短窗口结果改写为 clean OOS，也不会把指数发布前回溯改写成
 基金实盘历史。C44 虽然通过了冻结的 C11 替换门，但仍属于已污染形成期和当前幸存产品选择；
-它只是研究默认后继，不拥有模拟、实盘或立即清仓迁移权限。
+它只是大多数人的研究默认后继。C45 保持 60% 权益并通过了高进攻目标下的 C11 替换门，
+只对明确要求更高权益的用户成为研究后继。二者都不拥有模拟、实盘或立即清仓迁移权限。
 
 公开摘要：
 
 - [`evidence/c21-c26/public_research_summary.json`](../../evidence/c21-c26/public_research_summary.json)
 - [`evidence/c44/public_research_summary.json`](../../evidence/c44/public_research_summary.json)
+- [`evidence/c45/public_research_summary.json`](../../evidence/c45/public_research_summary.json)

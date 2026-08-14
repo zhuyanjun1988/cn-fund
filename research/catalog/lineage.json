@@ -65,6 +65,22 @@
       "effective_time": "2026-08-14",
       "reason": "C44 passed frozen same-window material C11 replacement gates, next-session execution, return-source stresses, current structure and product-health checks; existing C11 lots still require a phased fee-aware transition.",
       "evidence_hash": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd"
+    },
+    {
+      "source_id": "C21-Standard-1",
+      "target_id": "C45-Aggressive-1",
+      "relation": "derivative",
+      "effective_time": "2026-08-14",
+      "reason": "C45 preserves C21's exact sixty-percent equity, gold, cash and drift rules and changes only the fifteen-percent bond route to a causally available 511010-to-003376 duration bridge.",
+      "evidence_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e"
+    },
+    {
+      "source_id": "C11-C8-Style-Switch-Balanced-60",
+      "target_id": "C45-Aggressive-1",
+      "relation": "supersedes",
+      "effective_time": "2026-08-14",
+      "reason": "For the user's explicitly requested higher-offense domestic research target, C45 passed frozen same-window C11 replacement, route, stress, structure and strategic product gates; existing lots still require a phased fee-aware transition and no order is authorized.",
+      "evidence_hash": "8a5a0ed9c6d01bda00a65070f5303685186bb7a297a4cfcb782c2dea3fdf137e"
     }
   ],
   "non_supersession": [
@@ -77,6 +93,11 @@
       "candidate_id": "C26-Standard-1",
       "does_not_supersede": "C11-C8-Style-Switch-Balanced-60",
       "reason": "Limited 2019-2026 window, free-cash-flow backfill sensitivity incomplete and zero complete post-freeze month-ends."
+    },
+    {
+      "candidate_id": "C45-Aggressive-1",
+      "does_not_supersede": "C44-Standard-1",
+      "reason": "C45 has higher formation-period CAGR and higher nominal equity, while C44 retains lower drawdown and slightly higher Calmar and therefore remains the default for most people."
     }
   ]
 }

@@ -1,0 +1,86 @@
+{
+  "schema_version": "c45-public-contract-v1",
+  "candidate_id": "C45-Aggressive-1",
+  "canonical_name": "C45-Aggressive-1",
+  "descriptive_name_cn": "C45六成权益因子久期桥接进取策略",
+  "technical_id": "C45-C21EQ60-FCF23.57-DIV19.29-MQ17.14-G20-DUR15-CASH5-511010-TO-003376-LAG1",
+  "parent_id": "C21-Standard-1",
+  "contract_frozen_before_one_shot_run": true,
+  "internal_frozen_contract_sha256": "f9cb40a4c74f3c693de91a29088e21d2fa22e3bdcbd44d1b14f754d21e8a43ac",
+  "evidence_class": "contaminated-formation-factor-backfill-repeated-window-never-clean-OOS",
+  "economic_hypothesis": "Keeping C21's exact sixty-percent equity factor mix, a causally available sovereign-to-policy-bank duration route may add term premium and recession or disinflation convexity without exceeding the user's historical and deterministic stress limits.",
+  "single_conceptual_change_from_parent": "Replace only C21's fifteen-percent short policy-bank-bond sleeve with an availability-aware duration route; all equity, gold, cash, drift and cost rules remain unchanged.",
+  "target_weights": {
+    "024622_free_cash_flow_factor": "0.23571428571428570",
+    "021550_dividend_low_volatility": "0.19285714285714287",
+    "007593_CSI500_quality_growth": "0.17142857142857143",
+    "000216_gold": "0.20000000000000000",
+    "003376_long_policy_bank_bond_current_route": "0.15000000000000000",
+    "cash_cny": "0.05000000000000000"
+  },
+  "historical_availability_bridge": {
+    "before_003376_availability": "Use actual 511010 five-year Treasury ETF NAV total-return path.",
+    "first_003376_NAV_observation": "2016-09-26",
+    "route_switch_execution_close": "2016-09-27",
+    "first_003376_return_session": "2016-09-28",
+    "switch_cost_charged": true,
+    "current_investor_rule": "Use 003376 directly after current product and channel checks; 511010 is historical evidence plumbing only."
+  },
+  "decision_rule": {
+    "observation_clock": "After all month-end common-session NAVs are knowable",
+    "drift_trigger_absolute_percentage_points": "5.0",
+    "action_below_trigger": "HOLD",
+    "action_at_or_above_trigger": "Restore every sleeve to its frozen target",
+    "execution_clock": "Next common NAV or subscription session after the decision date",
+    "new_cash_rule": "Fund underweight sleeves first before creating avoidable redemptions",
+    "unknown_input_or_product_state": "FAIL_CLOSED"
+  },
+  "cost_and_delay_protocol": {
+    "base_one_way_l1_cost": "0.0025",
+    "high_one_way_l1_cost": "0.0100",
+    "extreme_one_way_l1_cost": "0.0250",
+    "primary_execution_lag_common_sessions": 1,
+    "delay_stress_common_sessions": 2
+  },
+  "frozen_gates": {
+    "base_CAGR_min": "0.11",
+    "base_maximum_drawdown_max": "0.30",
+    "base_Calmar_min": "0.41",
+    "high_cost_CAGR_min": "0.106",
+    "extreme_cost_CAGR_min": "0.102",
+    "lag_two_CAGR_min": "0.108",
+    "worst_calendar_year_min": "-0.15",
+    "worst_rolling_three_year_CAGR_min": "-0.03",
+    "normal_deterministic_loss_max": "0.35",
+    "extreme_deterministic_loss_max": "0.45",
+    "CAGR_advantage_vs_matching_C21_min_percentage_points": "0.25",
+    "CAGR_advantage_vs_C44_min_percentage_points": "0.50"
+  },
+  "run_budget": {
+    "formal_numeric_candidates": 1,
+    "parameter_grid_allowed": false,
+    "neighboring_weight_rescue_allowed": false,
+    "alternative_duration_product_rescue_allowed": false,
+    "post_result_old_sample_search_stopped": true
+  },
+  "required_product_stop_conditions": [
+    "material fund-manager or investment-team change",
+    "fund scale below the frozen admission floor",
+    "purchase suspension or intended-channel limit",
+    "material prospectus, benchmark or fee change",
+    "look-through concentration above a frozen limit",
+    "unknown same-session confirmation, settlement or redemption conditions"
+  ],
+  "authority_boundary": {
+    "research_successor_to_C11_for_higher_offense_user": true,
+    "default_for_most_people": "C44-Standard-1",
+    "immediate_full_liquidation_authorized": false,
+    "clean_oos_claimed": false,
+    "simulation_approved": false,
+    "live_trading_approved": false,
+    "order_ready": false,
+    "account_accessed": false,
+    "credentials_accessed": false,
+    "orders_submitted": 0
+  }
+}
