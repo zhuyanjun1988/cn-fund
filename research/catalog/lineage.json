@@ -57,6 +57,14 @@
       "effective_time": "2026-08-12",
       "reason": "The short policy-bank-bond sleeve was replaced by the same-sized long-duration fund 003376 sleeve.",
       "evidence_hash": "d63f1ea8adbd786e389fc817ee1d63946ac2d599a22386592c133e25bd232f93"
+    },
+    {
+      "source_id": "C11-C8-Style-Switch-Balanced-60",
+      "target_id": "C44-Standard-1",
+      "relation": "research-default-successor",
+      "effective_time": "2026-08-14",
+      "reason": "C44 passed frozen same-window material C11 replacement gates, next-session execution, return-source stresses, current structure and product-health checks; existing C11 lots still require a phased fee-aware transition.",
+      "evidence_hash": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd"
     }
   ],
   "non_supersession": [

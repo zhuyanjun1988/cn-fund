@@ -1,0 +1,212 @@
+{
+  "schema_version": "c44-public-research-summary-v1",
+  "published_on": "2026-08-14",
+  "candidate_id": "C44-Standard-1",
+  "canonical_name": "C44成熟三因子多经理固收加杠铃策略",
+  "technical_id": "C44-MAT3-MMCARRY-LQ15-DIV15-MQ20-G30-B47-5-B8-5-B17-5-CASH5-LAG1",
+  "authority_boundary": {
+    "evidence_class": "contaminated-formation-current-survivor-selection-never-clean-OOS",
+    "research_default_successor_to_C11": true,
+    "current_account_action": "PHASED_TRANSITION_ONLY_AFTER_HOLDINGS_CHANNEL_AND_HOUSEHOLD_GOLD_CHECKS",
+    "immediate_full_liquidation_authorized": false,
+    "order_ready": false,
+    "clean_oos_claimed": false,
+    "simulation_approved": false,
+    "live_trading_approved": false,
+    "account_accessed": false,
+    "credentials_accessed": false,
+    "orders_submitted": 0
+  },
+  "window": {
+    "start": "2015-01-05",
+    "end": "2026-07-06",
+    "common_sessions": 2794,
+    "warning": "The same 2015-2026 history was repeatedly used during asset, fund and weight research; it is formation evidence, not a clean holdout."
+  },
+  "target_weights": {
+    "217027_large_quality": "0.15000000000000000",
+    "100032_dividend_enhanced": "0.15000000000000000",
+    "007593_midcap_quality_growth": "0.20000000000000000",
+    "000216_gold": "0.30000000000000000",
+    "000047_credit_convertible_carry": "0.05000000000000000",
+    "110008_stable_fixed_income_plus": "0.05000000000000000",
+    "110017_enhanced_bond_carry": "0.05000000000000000",
+    "cash_cny": "0.05000000000000000"
+  },
+  "execution_rule": {
+    "decision_frequency": "monthly",
+    "drift_trigger_absolute_percentage_points": "5.0",
+    "primary_execution_lag_common_sessions": 1,
+    "below_trigger": "HOLD",
+    "at_or_above_trigger": "REBALANCE_ALL_SLEEVES_TO_TARGET",
+    "historical_rebalance_count": 8,
+    "annualized_one_way_l1_turnover": "0.13797818644971120"
+  },
+  "formation_metrics": {
+    "base_cost25bp_lag1": {
+      "net_cagr": "0.10470503457351654",
+      "maximum_drawdown": "0.23904291755914953",
+      "calmar": "0.43801772352283980",
+      "annualized_volatility": "0.11842645308602032",
+      "worst_calendar_year": "-0.10633084428319806",
+      "worst_rolling_three_year_cagr": "-0.007898904659657813",
+      "cagr_2015_2018": "0.06657689625281771",
+      "cagr_2019_2022": "0.10843625947540536",
+      "cagr_2023_end": "0.14584328171508498"
+    },
+    "high_cost100bp_lag1": {
+      "net_cagr": "0.10355799195582960",
+      "maximum_drawdown": "0.23904291755914953",
+      "calmar": "0.43321924369587267"
+    },
+    "extreme_cost250bp_lag1": {
+      "net_cagr": "0.10125124361859483",
+      "maximum_drawdown": "0.23904291755914853",
+      "calmar": "0.42356930986479170"
+    },
+    "base_cost25bp_lag2": {
+      "net_cagr": "0.10351099451833990",
+      "maximum_drawdown": "0.24302831818795534",
+      "calmar": "0.42592153577051733"
+    }
+  },
+  "comparisons": {
+    "C11_same_window_base25bp_lag1": {
+      "net_cagr": "0.08556150638034388",
+      "maximum_drawdown": "0.27999145137567816",
+      "calmar": "0.30558613829085030",
+      "worst_rolling_three_year_cagr": "-0.059964476324338545"
+    },
+    "C44_minus_C11": {
+      "cagr_percentage_points": "1.9143528193172665",
+      "maximum_drawdown_percentage_points": "-4.094853381652863",
+      "calmar": "0.13243158523198950",
+      "worst_rolling_three_year_cagr_percentage_points": "5.206557166468073"
+    },
+    "C21_same_window_base25bp": {
+      "net_cagr": "0.10750160155325283",
+      "maximum_drawdown": "0.26637737315648500",
+      "calmar": "0.40356881772424550"
+    },
+    "C44_minus_C21": {
+      "cagr_percentage_points": "-0.27965669797362924",
+      "maximum_drawdown_improvement_percentage_points": "2.7334455597335494",
+      "calmar": "0.034448905798594276",
+      "frozen_three_part_gate_passed": true
+    }
+  },
+  "return_source_stress": {
+    "gold_minus_2pct_annual": {
+      "net_cagr": "0.09705189187109364",
+      "maximum_drawdown": "0.24247094630444488",
+      "calmar": "0.40026194210186300",
+      "cagr_advantage_vs_C11_percentage_points": "1.1490385490749766"
+    },
+    "gold_minus_4pct_annual": {
+      "net_cagr": "0.08907176272619699",
+      "maximum_drawdown": "0.24591626993546690",
+      "calmar": "0.36220361812405140",
+      "cagr_advantage_vs_C11_percentage_points": "0.35102563458531133"
+    },
+    "217027_minus_2pct_annual": {
+      "net_cagr": "0.10146160072389554",
+      "maximum_drawdown": "0.24009724307100588",
+      "calmar": "0.42258544673871780"
+    },
+    "007593_minus_2pct_annual": {
+      "net_cagr": "0.10048500176116026",
+      "maximum_drawdown": "0.24046464850836113",
+      "calmar": "0.41787847978687950"
+    },
+    "100032_minus_1pct_annual": {
+      "net_cagr": "0.10306848219726361",
+      "maximum_drawdown": "0.23959376387083064",
+      "calmar": "0.43018015382416090"
+    },
+    "all_carry_routes_minus_2pct_annual": {
+      "net_cagr": "0.10161348003869120",
+      "maximum_drawdown": "0.24084564381397244",
+      "calmar": "0.42190291852310510"
+    },
+    "carry_alpha_halved_vs_short_policy_bank_bond": {
+      "net_cagr": "0.10185803847973118",
+      "maximum_drawdown": "0.23669223314432053",
+      "calmar": "0.43033958962913815"
+    },
+    "joint_gold_and_all_carry_minus_2pct_annual": {
+      "net_cagr": "0.09393173464574889",
+      "maximum_drawdown": "0.24427588739407946",
+      "calmar": "0.38453134137719040"
+    },
+    "permanent_carry_loss_shocks": {
+      "net_cagr": "0.10305970065824144",
+      "maximum_drawdown": "0.23904291755914953",
+      "calmar": "0.43113471719043933"
+    },
+    "all_frozen_return_path_groups_passed": true,
+    "gold_dependency_warning": "At a permanent four-percentage-point annual gold haircut, C44's CAGR advantage over C11 shrinks to about 0.35 percentage points."
+  },
+  "static_and_current_structure": {
+    "extreme_static_loss": "0.4175",
+    "nominal_equity": "0.50000000000000000",
+    "hidden_equity_from_fixed_income_plus": "0.021775000000000003",
+    "effective_equity": "0.52177500000000000",
+    "effective_equity_limit": "0.53000000000000000",
+    "single_security_buffered_upper_bound": "0.026302000000000002",
+    "single_security_limit": "0.04000000000000000",
+    "industry_buffered_upper_bound": "0.12023000000000002",
+    "industry_limit": "0.15000000000000000",
+    "maximum_industry": "financials",
+    "maximum_equity_pairwise_daily_correlation": "0.8509875225931894",
+    "correlation_limit": "0.9000000000000000",
+    "399550_930939_exact_overlap_fraction_of_smaller": "0.0600000000000000",
+    "overlap_limit": "0.1500000000000000",
+    "all_current_structure_checks_passed": true
+  },
+  "current_product_health": {
+    "as_of": "2026-08-14",
+    "all_manager_level_checks_passed": true,
+    "order_ready": false,
+    "order_blocker": "Intended-channel same-session purchase limits, discounts, settlement, suitability and the investor's actual holding/fee lots were not captured.",
+    "notable_observations": {
+      "217027": "AUM about CNY 468 million; manager changed on 2025-11-13, so tracking continuity must be monitored.",
+      "100032": "A/B net assets about CNY 4.735 billion; stock weight 92.45%; management plus custody fee 1.40%; at least one manager tenure above ten years.",
+      "007593": "AUM about CNY 243 million; above the frozen floor but still a relatively small route.",
+      "000216": "AUM about CNY 9.722 billion; manager-level route open at observation time.",
+      "000047": "Conservative AUM about CNY 4.438 billion; disclosed equity weight 11.64% at 2026-06-30.",
+      "110008": "Conservative AUM about CNY 28.169 billion; disclosed equity weight 19.79% at 2026-06-30.",
+      "110017": "Conservative AUM about CNY 43.634 billion; disclosed equity weight 12.12% at 2026-06-30."
+    }
+  },
+  "migration_boundary": {
+    "stop_new_C11_contributions": true,
+    "existing_first_C11_batch": "HOLD_PENDING_LOT_AND_REDEMPTION_FEE_REVIEW",
+    "new_cash": "FILL_C44_UNDERWEIGHTS_AFTER_SAME_SESSION_PRODUCT_GATES",
+    "legacy_positions": "THREE_MONTH_END_TRANCHES_IS_A_PRAGMATIC_EXECUTION_PLAN_NOT_A_RETURN_SIGNAL",
+    "household_gold_warning": "The investor's separate overseas allocation already includes GLDM. Combine domestic and overseas gold exposure before executing C44's full 30 percent domestic gold sleeve."
+  },
+  "source_bindings": {
+    "internal_frozen_contract_sha256": "a4756947ea3da7ce5d8374bcff94c54af8ddca4403777f1c3d0e994ee0b6952c",
+    "internal_research_code_sha256": "61183a0975a07e37bf177da1136c226d943593ab84f4f88a75db3ae1f3a41728",
+    "internal_numeric_result_sha256": "931d68afe4f013ed5c0b990621a1f518a00a52b32b7c3b3cdecb0e5b69b4f918",
+    "internal_current_audit_contract_sha256": "ea12fb5a35f3a567cedf2d242f4b6549e009400c02e7cb0cffc9d96573760d51",
+    "internal_current_audit_code_sha256": "6dc1270325a34153907cf1cdead378e5235a81e011e0a5f1e1d2d3827590e2e9",
+    "internal_current_audit_result_sha256": "29cbaf31f2b3fed187149ce3b2adb800518b571f8bf04cbd139a9d78acf821cc",
+    "internal_independent_verifier_sha256": "1b09423ad01dd1e3cd333e17da64b45e4893275aa0baecb7abbb418da3254a0f",
+    "internal_independent_verification_result_sha256": "ebb0d77734f3730a952918a237f897a6f59ca61ad13238d65cd3e48046e15cbc",
+    "internal_independent_verification_passed_all": true,
+    "100032_Q2_official_pdf_sha256": "e81043dcee72e578a0085a860a0f667cd175998c4602c67add85cf93c3494341",
+    "100032_restore_large_subscription_pdf_sha256": "b4615c94f3c560baac34184e673548fad885aaf762ba3feba4cee586287e20e8",
+    "100032_current_official_page_capture_sha256": "de504f380bb7bd503eeccbcc3d3a451383e22d9c0cbbcec1b7959b62e692e24c",
+    "000922_current_factsheet_sha256": "87f47942ad0d700f9168bbec3539bc29b82bf9da82fdaebf1e7761b9b641d428"
+  },
+  "official_sources": {
+    "100032_product": "https://www.fullgoal.com.cn/fundDetail/100032/index.html",
+    "100032_2026Q2": "https://www.fullgoal.com.cn/wbs-file/fund_report/20260721/CN_50100000_100032_FB030020_20260016.pdf",
+    "100032_restore_large_subscription": "https://www.fullgoal.com.cn/wbs-file/fund_report/20260210/CN_50100000_100032_FC190110_20260005.pdf",
+    "000922_factsheet": "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000922factsheet.pdf",
+    "217027_product": "https://www.cmfchina.com/web/fundDetail/217027/index.html",
+    "007593_product": "https://www.pyamc.com/front/productDetail_100236_007593.jhtml",
+    "000216_product": "https://www.huaan.com.cn/funds/000216/index.shtml"
+  }
+}

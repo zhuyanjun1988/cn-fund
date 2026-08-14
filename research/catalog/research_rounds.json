@@ -154,6 +154,23 @@
       "seal_hash": "d63f1ea8adbd786e389fc817ee1d63946ac2d599a22386592c133e25bd232f93",
       "contaminated": true,
       "invalid_run": false
+    },
+    {
+      "round_id": "ROUND-C44-S1",
+      "preregistration_hash": "a4756947ea3da7ce5d8374bcff94c54af8ddca4403777f1c3d0e994ee0b6952c",
+      "hypothesis": "A static mature three-factor equity engine plus gold and a bounded three-manager fixed-income-plus ensemble can improve C11's return and drawdown together under next-session execution.",
+      "component_changed": "Recombine the independently researched mature-equity and multi-manager-carry modules under a new lag-one contract",
+      "candidate_family": "C44",
+      "candidate_count": 1,
+      "formation_result": "Versus same-window C11, CAGR improved 1.9144 percentage points, MDD improved 4.0949 points and Calmar improved 0.1324; all frozen numeric, timing, return-source, structure and current-product gates passed.",
+      "validation_opened": false,
+      "selected_id": "C44-Standard-1",
+      "final_decision": "RECOMMEND_RESEARCH_DEFAULT_SUCCESSOR_TO_C11_PHASED_TRANSITION_REQUIRED",
+      "rejection_reason": null,
+      "artifact_root": "evidence/c44",
+      "seal_hash": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd",
+      "contaminated": true,
+      "invalid_run": false
     }
   ]
 }

@@ -2,6 +2,10 @@
   "schema_version": "strategy-research-catalog-v1",
   "as_of": "2026-08-14",
   "public_evidence_manifest_sha256": "4aff425258d83574e8ac1448b158ffb56a552a11baa2b6e291e0ce97adea7a6f",
+  "public_evidence_manifests": {
+    "C21-C26": "4aff425258d83574e8ac1448b158ffb56a552a11baa2b6e291e0ce97adea7a6f",
+    "C44-Standard-1": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd"
+  },
   "catalog_invariants": {
     "historical_rows_append_only": true,
     "failed_rounds_counted": true,
@@ -297,6 +301,38 @@
       "decision_path": "docs/13_C21至C26研究谱系与当前结论.md",
       "decision_hash": "d63f1ea8adbd786e389fc817ee1d63946ac2d599a22386592c133e25bd232f93",
       "as_of": "2026-08-12"
+    },
+    {
+      "canonical_name": "C44-Standard-1",
+      "technical_id": "C44-MAT3-MMCARRY-LQ15-DIV15-MQ20-G30-B47-5-B8-5-B17-5-CASH5-LAG1",
+      "freeze_hash": "a4756947ea3da7ce5d8374bcff94c54af8ddca4403777f1c3d0e994ee0b6952c",
+      "family": "C44",
+      "parent_id": "C40-Standard-1+C42-Standard-1",
+      "signal": "Static mature three-factor equity allocation plus multi-manager fixed-income-plus carry; no factor timing",
+      "action": "At month-end, hold unless any sleeve drifts by at least five percentage points; then restore all frozen targets on the next common session",
+      "risk": "50 percent nominal equity, 30 percent gold, 15 percent multi-manager fixed-income-plus and 5 percent cash; 52.1775 percent current look-through equity",
+      "execution": "Decision after knowable month-end NAVs; execute on the next common NAV/session; unknown product or channel state fails closed",
+      "signal_assets": ["month-end actual NAV weights"],
+      "traded_assets": ["217027", "100032", "007593", "000216", "000047", "110008", "110017", "CASH"],
+      "formation": {"start": "2015-01-05", "end": "2026-07-06", "status": "sealed-contaminated-current-survivor-selection"},
+      "validation": {"status": "not-opened"},
+      "terminal": {"status": "research-default-successor-phased-transition-only"},
+      "data_manifest_hash": "11b3eb9d5304473ee05fdb35d886746d111dd9f78ebaea2abb1f8c083f0c12dd",
+      "code_hash": "61183a0975a07e37bf177da1136c226d943593ab84f4f88a75db3ae1f3a41728",
+      "cost_convention": {"base_l1": "0.0025", "high_l1": "0.0100", "extreme_l1": "0.0250"},
+      "base_metrics": {"cagr": "0.10470503457351654", "maximum_drawdown": "0.23904291755914953", "calmar": "0.4380177235228398"},
+      "stress_metrics": {"gold_minus_4pct_annual_cagr": "0.08907176272619699", "extreme_cost_cagr": "0.10125124361859483", "lag_two_cagr": "0.1035109945183399", "extreme_static_loss": "0.4175"},
+      "candidate_count": 1,
+      "effective_paths": 1,
+      "selection_metric": "Frozen C11 material replacement gates plus C21 risk-efficiency, return-source, timing, date, structure and current-product gates",
+      "pbo": "not-computed; repeated-use contamination and current-survivor selection disclosed",
+      "simulation_status": "NOT_APPROVED",
+      "live_status": "NOT_APPROVED",
+      "forward_complete": 0,
+      "forward_required": 12,
+      "decision_path": "docs/15_C44成熟三因子多经理固收加杠铃策略.md",
+      "decision_hash": "d50cf61c7789e74db66c65a0eb3aadc1f0f3eb13e3fea0e74d9bf9e3839df721",
+      "as_of": "2026-08-14"
     }
   ]
 }

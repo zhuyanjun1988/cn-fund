@@ -1,0 +1,74 @@
+{
+  "schema_version": "c44-public-contract-v1",
+  "candidate_id": "C44-Standard-1",
+  "canonical_name": "C44成熟三因子多经理固收加杠铃策略",
+  "technical_id": "C44-MAT3-MMCARRY-LQ15-DIV15-MQ20-G30-B47-5-B8-5-B17-5-CASH5-LAG1",
+  "contract_frozen_before_one_shot_run": true,
+  "internal_frozen_contract_sha256": "a4756947ea3da7ce5d8374bcff94c54af8ddca4403777f1c3d0e994ee0b6952c",
+  "evidence_class": "contaminated-formation-current-survivor-selection-never-clean-OOS",
+  "economic_hypothesis": "A static blend of mature large-cap quality, dividend-value enhancement and mid-cap quality growth, combined with gold and a bounded three-manager fixed-income-plus ensemble, can improve C11's return and drawdown together without relying on same-close execution or factor timing.",
+  "target_weights": {
+    "217027_large_quality": "0.15000000000000000",
+    "100032_dividend_enhanced": "0.15000000000000000",
+    "007593_midcap_quality_growth": "0.20000000000000000",
+    "000216_gold": "0.30000000000000000",
+    "000047_credit_convertible_carry": "0.05000000000000000",
+    "110008_stable_fixed_income_plus": "0.05000000000000000",
+    "110017_enhanced_bond_carry": "0.05000000000000000",
+    "cash_cny": "0.05000000000000000"
+  },
+  "decision_rule": {
+    "observation_clock": "After all common-session month-end NAVs are knowable",
+    "drift_trigger_absolute_percentage_points": "5.0",
+    "action_below_trigger": "HOLD",
+    "action_at_or_above_trigger": "Restore every sleeve to its frozen target",
+    "execution_clock": "Next common NAV/session after the decision date",
+    "new_cash_rule": "Fund underweight sleeves first before creating avoidable redemptions",
+    "unknown_input_or_product_state": "FAIL_CLOSED"
+  },
+  "cost_and_delay_protocol": {
+    "base_one_way_l1_cost": "0.0025",
+    "high_one_way_l1_cost": "0.0100",
+    "extreme_one_way_l1_cost": "0.0250",
+    "primary_execution_lag_common_sessions": 1,
+    "delay_stress_common_sessions": 2
+  },
+  "replacement_gates": {
+    "against_C11": {
+      "base_cagr_advantage_min_percentage_points": "1.50",
+      "base_maximum_drawdown_improvement_min_percentage_points": "2.00",
+      "base_calmar_advantage_min": "0.10",
+      "absolute_maximum_drawdown_max": "0.35",
+      "extreme_static_loss_max": "0.45"
+    },
+    "against_C21": {
+      "cagr_disadvantage_max_percentage_points": "0.50",
+      "maximum_drawdown_improvement_min_percentage_points": "2.00",
+      "calmar_advantage_min": "0.03"
+    },
+    "current_structure": {
+      "effective_equity_max": "0.53",
+      "single_security_buffered_upper_bound_max": "0.04",
+      "industry_buffered_upper_bound_max": "0.15",
+      "equity_pairwise_daily_correlation_max": "0.90",
+      "exact_index_overlap_fraction_max": "0.15"
+    }
+  },
+  "required_product_stop_conditions": [
+    "material fund-manager or investment-team change",
+    "fund scale below the frozen admission floor",
+    "purchase suspension or intended-channel limit",
+    "material prospectus, benchmark or fee change",
+    "look-through concentration above a frozen limit"
+  ],
+  "authority_boundary": {
+    "research_default_successor_to_C11": true,
+    "immediate_full_liquidation_authorized": false,
+    "clean_oos_claimed": false,
+    "simulation_approved": false,
+    "live_trading_approved": false,
+    "account_accessed": false,
+    "credentials_accessed": false,
+    "orders_submitted": 0
+  }
+}
